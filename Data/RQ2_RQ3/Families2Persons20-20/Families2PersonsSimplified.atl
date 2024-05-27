@@ -1,0 +1,36 @@
+-- @path Families=/Families2Persons/Families.ecore
+-- @path Persons=/Families2Persons/Persons.ecore
+
+module Families2Persons;
+create OUT : Persons from IN : Families;
+
+helper context Families!Member def: familyName : String = 'Unknown';
+
+helper context Families!Member def: isFemale() : Boolean =
+	if not self.familyMother.oclIsUndefined() then
+		true
+	else
+		if not self.familyDaughter.oclIsUndefined() then
+			true
+		else
+			false
+		endif
+	endif;
+	
+rule Member2Male {
+	from
+		s : Families!Member (not s.isFemale())
+	to
+		t : Persons!Male (
+			fullName <- s.firstName + ' ' + s.familyName	
+		)
+}
+
+rule Member2Female {
+	from
+		s : Families!Member (s.isFemale())
+	to
+		t : Persons!Female (
+			fullName <- s.firstName + ' ' + s.familyName	
+		)
+}

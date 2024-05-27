@@ -1,0 +1,138 @@
+-- No changes needed in the module declaration
+
+module IEEE1471_2_MoDAF; 
+create OUT : MoDAF  from IN : IEEE1471 ;
+
+-- Rationale helper can be directly used in rules
+--@begin helper rationale
+helper def : rationale : String =
+  Sequence{} -> union(IEEE1471!Rationale.allInstances()) -> first().name + ', ' +
+  Sequence{} -> union(IEEE1471!Rationale.allInstances()) -> first().content;
+--@end helper rationale
+
+rule IEEE1471Model2MoDAFModel {
+  from
+    mFrom : IEEE1471!IEEE1471Model
+  to
+    mTo : MoDAF!MoDAFModel(
+      name <- mFrom.name,
+      content <- mFrom.content,
+      enterprise <- mFrom.system,
+      environment <- mFrom.environment,
+      operationalMissions <- mFrom.missions,
+      architectures <- mFrom.architecture,
+      architecturalDescription <- mFrom.architecturalDescription,
+      stakeholders <- mFrom.stakeholders,
+      architecturalFrameworks <- MoDAF!ArchitecturalFramework(
+        name <- 'Undefined Architectural Framework',
+        ownedMember <- Sequence{} -> union(IEEE1471!Viewpoint.allInstances())
+                        -> select(vp | vp.hasSource.oclIsUndefined())
+      )
+    )
+}
+
+-- System 2 Enterprise (use consistent naming)
+rule System2Enterprise {
+  from
+    sys : IEEE1471!System
+  to
+    ent : MoDAF!Enterprise(
+      name <- sys.name,
+      content <- sys.content,
+      fulfills <- sys.fulfills,
+      inhabits <- sys.inhabits
+    )
+}
+
+-- Environment remains unchanged
+
+-- Mission 2 OperationalMission (use consistent naming)
+rule Mission2OperationalMission {
+  from
+    mission : IEEE1471!Mission
+  to
+    opMission : MoDAF!OperationalMission(
+      name <- mission.name,
+      content <- mission.content
+    )
+}
+
+-- Architecture 2 Architecture
+rule Architecture2Architecture {
+  from
+    arch : IEEE1471!Architecture
+  to
+    moDafArch : MoDAF!Architecture(
+      name <- arch.name,
+      content <- arch.content,
+      enterprise <- Sequence{} -> union(IEEE1471!System.allInstances()) -> first(),
+      describedBy <- arch.describedBy
+    )
+}
+
+-- ArchitecturalDescription 2 ArchitecturalDescription
+rule ArchitecturalDescription2ArchitecturalDescription {
+  from
+    archDesc : IEEE1471!ArchitecturalDescription
+  to
+    moDafArchDesc : MoDAF!ArchitecturalDescription(
+      name <- archDesc.name,
+      content <- archDesc.content,
+      products <- archDesc.organizedBy,
+      purpose <- thisModule.rationale,
+      viewpoints <- archDesc.selects
+    )
+}
+
+-- Stakeholder 2 Stakeholder (use consistent naming)
+rule Stakeholder2Stakeholder {
+  from
+    stakeholder : IEEE1471!Stakeholder
+  to
+    moDafStakeholder : MoDAF!Stakeholder(
+      name <- stakeholder.name,
+      content <- stakeholder.content
+    )
+}
+
+-- Viewpoint 2 View
+rule Viewpoint2View {
+  from
+    viewpoint : IEEE1471!Viewpoint
+  to
+    moDafView : MoDAF!View(
+      name <- viewpoint.name,
+      content <- viewpoint.content,
+      viewName <- viewpoint.name,
+      viewDescription <- viewpoint.content,
+      framework <- 
+        if viewpoint.hasSource.oclIsUndefined() 
+        then 'Undefined'
+        else viewpoint.hasSource.name
+        endif,
+      usedToCover <- viewpoint.usedToCover,
+      definingFramework <- viewpoint.hasSource
+    )
+}
+
+-- View 2 ArchitecturalProduct
+rule View2ArchitecturalProduct {
+  from
+    view : IEEE1471!View
+  to
+    moDafProduct : MoDAF!ArchitecturalProduct(
+      name <- view.name,
+      content <- view.content,
+      description <- view.name + ', ' + view.content,
+      definingView <- view.conformsTo,
+      addresses <- view.conformsTo.usedToCover,
+      architecturalElements <- view.consistsOf
+    )
+}
+
+-- Remove redundant Model2Element rule (use OCL checks in other rules)
+
+-- Concern 2 Concern (use consistent naming)
+rule Concern2Concern {
+  from
+    concern : IEEE1471!

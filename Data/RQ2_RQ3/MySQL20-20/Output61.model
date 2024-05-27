@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mysql:DataBase xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mysql="http://mysql" xsi:schemaLocation="http://mysql ../../model/MySQL.ecore" xmi:id="_uXkccFiJEe6Vh9XGMD-IQw" name="dbtest">
+  <tables name="cities">
+    <columns xsi:type="mysql:IntegerColumn" name="city_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="vTVfaXkX" type="varchar" comment=""/>
+    <columns name="OlKxjzYQAAADzHYYYpY" type="varchar" comment=""/>
+    <columns name="AfQjfwcI" type="varchar" comment=""/>
+    <columns name="BhTrCdZQ" type="varchar" comment=""/>
+    <columns name="LrkfWpDFDbUCVNZ" type="varchar" comment=""/>
+    <columns name="woNVPmRnnlauBiGzBho" type="varchar" comment=""/>
+    <columns name="ZtfFzyAmfWlZxSXXMtn" type="varchar" comment=""/>
+    <columns name="uLWbl" type="varchar" comment=""/>
+    <columns name="cLcHwRiZSUEflq" type="varchar" comment=""/>
+  </tables>
+  <tables name="clubs">
+    <columns xsi:type="mysql:IntegerColumn" name="club_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="yDKJphLkd" type="varchar" comment=""/>
+    <columns name="JEoRpuEDeUgnqKsDKV" type="varchar" comment=""/>
+    <columns name="wPuOqfTVfqc" type="varchar" comment=""/>
+    <columns name="sdtBwwgvm" type="varchar" comment=""/>
+  </tables>
+  <tables name="coaches">
+    <columns xsi:type="mysql:IntegerColumn" name="coach_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="team" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="longblob" null="true" defaultValue="" comment=""/>
+    <columns name="rIBgLZYuZPqMJQLFU" type="varchar" comment=""/>
+    <columns name="omAzuygUXzQMVqljuu" type="varchar" comment=""/>
+    <columns name="jvZmKJgKB" type="varchar" comment=""/>
+    <columns name="XfoEIW" type="varchar" comment=""/>
+    <columns name="FlLbto" type="varchar" comment=""/>
+  </tables>
+  <tables name="countries">
+    <columns xsi:type="mysql:IntegerColumn" name="country_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="flag" type="blob" null="true" defaultValue="" comment=""/>
+    <columns name="oqGeMobCI" type="varchar" comment=""/>
+    <columns name="iMGuzadZaCvjcCKIO" type="varchar" comment=""/>
+    <columns name="QRhEpsPTljtZmzknW" type="varchar" comment=""/>
+    <columns name="Kbuzd" type="varchar" comment=""/>
+    <columns name="wmWNGTkot" type="varchar" comment=""/>
+    <columns name="CWAvAJXiuRUZLeEd" type="varchar" comment=""/>
+    <columns name="oFeMPykvZRLiV" type="varchar" comment=""/>
+    <columns name="jUkWw" type="varchar" comment=""/>
+    <columns name="SiDPi" type="varchar" comment=""/>
+    <columns name="kcUttsyQosgrkSFkM" type="varchar" comment=""/>
+  </tables>
+  <tables name="goals">
+    <columns xsi:type="mysql:IntegerColumn" name="match" type="tinyint" defaultValue="0" comment="matches:match_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="mysql:IntegerColumn" name="added_time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="mysql:IntegerColumn" name="extra_time" type="tinyint" defaultValue="0" comment=""/>
+    <columns xsi:type="mysql:IntegerColumn" name="goal_id" type="int" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="player" type="int" defaultValue="0" comment="players:player_id"/>
+    <columns xsi:type="mysql:EnumColumn" name="own_goal" type="enum" null="true" defaultValue="n" comment="">
+      <enumSet>
+        <enumItems name="n"/>
+        <enumItems name="y"/>
+      </enumSet>
+    </columns>
+    <columns xsi:type="mysql:EnumColumn" name="penalty" type="enum" null="true" defaultValue="n" comment="">
+      <enumSet>
+        <enumItems name="n"/>
+        <enumItems name="y"/>
+      </enumSet>
+    </columns>
+    <columns name="ymjKGdrcHnUGK" type="varchar" comment=""/>
+    <columns name="iiOwctVZCyxdUP" type="varchar" comment=""/>
+    <columns name="dzzjxhNgXa" type="varchar" comment=""/>
+    <columns name="znfKietoykEln" type="varchar" comment=""/>
+    <columns name="QxorPKMVz" type="varchar" comment=""/>
+    <columns name="AVXvFgmxoJoCh" type="varchar" comment=""/>
+  </tables>
+  <tables name="matches">
+    <columns xsi:type="mysql:IntegerColumn" name="match_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="team_1" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="team_2" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="referee" type="tinyint" defaultValue="0" comment="referees:referee_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="stadium" type="tinyint" defaultValue="0" comment="stadiums:stadium_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="man_of_the_match" type="int" defaultValue="0" comment="players:player_id"/>
+    <columns xsi:type="mysql:EnumColumn" name="stage" type="enum" null="true" defaultValue="" comment="">
+      <enumSet>
+        <enumItems name="Group"/>
+        <enumItems name="Quarter-final"/>
+        <enumItems name="Semi-final"/>
+        <enumItems name="Final"/>
+      </enumSet>
+    </columns>
+    <columns name="date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="ytvfVDHYcqQ" type="varchar" comment=""/>
+    <columns name="SENSsoElqtgE" type="varchar" comment=""/>
+  </tables>
+  <tables name="players">
+    <columns xsi:type="mysql:IntegerColumn" name="team" type="tinyint" defaultValue="0" comment="teams:team_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="num_in_team" type="tinyint" null="true" defaultValue="" comment=""/>
+    <columns xsi:type="mysql:IntegerColumn" name="current_club" type="tinyint" defaultValue="0" comment="clubs:club_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="player_id" type="int" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:EnumColumn" name="position" type="enum" null="true" defaultValue="" comment="">
+      <enumSet>
+        <enumItems name="GK"/>
+        <enumItems name="DF"/>
+        <enumItems name="MD"/>
+        <enumItems name="FW"/>
+      </enumSet>
+    </columns>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+    <columns name="PDaPyaHJw" type="varchar" comment=""/>
+    <columns name="vbVjxx" type="varchar" comment=""/>
+    <columns name="JyYlcB" type="varchar" comment=""/>
+    <columns name="HWEaFpdmVpALrqpq" type="varchar" comment=""/>
+  </tables>
+  <tables name="referees">
+    <columns xsi:type="mysql:IntegerColumn" name="referee_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="country" type="tinyint" defaultValue="0" comment="countries:country_id"/>
+    <columns name="name" type="mysql:varchar" null="true" defaultValue="" comment=""/>
+    <columns name="birth_date" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="profession" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+    <columns name="LVcmARKpxTaapDfykL" type="varchar" comment=""/>
+    <columns name="YPmUpOpe" type="varchar" comment=""/>
+    <columns name="IOBbV" type="varchar" comment=""/>
+    <columns name="lNhwncvwuBLRvJw" type="varchar" comment=""/>
+    <columns name="nyHxRIyXTpJlJeJ" type="varchar" comment=""/>
+    <columns name="RJRUnjQRukRciHP" type="varchar" comment=""/>
+  </tables>
+  <tables name="stadiums">
+    <columns xsi:type="mysql:IntegerColumn" name="stadium_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="capacity" type="int" defaultValue="0" comment=""/>
+    <columns name="name" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="owner" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="architect" type="varchar" null="true" defaultValue="" comment=""/>
+    <columns name="opened" type="date" null="true" defaultValue="" comment=""/>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+    <columns name="eHxmWQPHVzcmXKa" type="varchar" comment=""/>
+    <columns name="HGYEOAPmFUAvp" type="varchar" comment=""/>
+    <columns name="CMzQYynIadmqfTQINt" type="varchar" comment=""/>
+    <columns name="EgMBoKqtkwXMhcYyPv" type="varchar" comment=""/>
+    <columns name="lwqmRSyWzDRrrDRcTX" type="varchar" comment=""/>
+    <columns name="jeQhTwEFWXoEaWcp" type="varchar" comment=""/>
+  </tables>
+  <tables name="stadiums_cities">
+    <columns xsi:type="mysql:IntegerColumn" name="stadium_id" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="stadiums:stadium_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="city_id" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="cities:city_id"/>
+    <columns name="XTVAPgEW" type="varchar" comment=""/>
+    <columns name="nPJMINlICvigE" type="varchar" comment=""/>
+    <columns name="tnfsFbi" type="varchar" comment=""/>
+    <columns name="fVCPRwEDjUQs" type="varchar" comment=""/>
+  </tables>
+  <tables name="teams">
+    <columns xsi:type="mysql:IntegerColumn" name="team_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="country" type="tinyint" defaultValue="0" comment="countries:country_id"/>
+    <columns xsi:type="mysql:EnumColumn" name="group" type="enum" defaultValue="A" comment="">
+      <enumSet>
+        <enumItems name="A"/>
+        <enumItems name="B"/>
+        <enumItems name="C"/>
+        <enumItems name="D"/>
+      </enumSet>
+    </columns>
+    <columns name="photo" type="blob" null="true" defaultValue="" comment=""/>
+    <columns name="JSpJvPz" type="varchar" comment=""/>
+    <columns name="VlcmtDVMsTNI" type="varchar" comment=""/>
+    <columns name="fZmlm" type="varchar" comment=""/>
+    <columns name="XsnrfjzhxR" type="varchar" comment=""/>
+  </tables>
+  <tables name="tests">
+    <columns xsi:type="mysql:IntegerColumn" name="team_id" type="tinyint" isPrimaryKey="true" defaultValue="" comment="teams:team_id" isAutoIncrement="true"/>
+    <columns xsi:type="mysql:IntegerColumn" name="country" type="tinyint" isPrimaryKey="true" defaultValue="0" comment="countries:country_id"/>
+    <columns xsi:type="mysql:IntegerColumn" name="player" type="tinyint" isPrimaryKey="true" defaultValue="" comment="players:player_id"/>
+    <columns name="HdFIlL" type="varchar" comment=""/>
+    <columns name="SPrERxlWUTRIZujye" type="varchar" comment=""/>
+  </tables>
+  <tables name="uKArGnKxKG">
+    <columns name="uxkDYfSylhIlPoI" type="varchar" comment=""/>
+    <columns name="VmEIazmikTWZxOo" type="varchar" comment=""/>
+    <columns name="YpitXGIqkE" type="varchar" comment=""/>
+    <columns name="vYRiXRJRIwIDRaT" type="varchar" comment=""/>
+    <columns name="SuNINerhg" type="varchar" comment=""/>
+    <columns name="mXktnn" type="varchar" comment=""/>
+    <columns name="KbplSQml" type="varchar" comment=""/>
+  </tables>
+  <tables name="sIzMwi">
+    <columns name="oGIwzdxmwidwYNiyy" type="varchar" comment=""/>
+    <columns name="xXTvXfc" type="varchar" comment=""/>
+    <columns name="leHnszdCUZbHQB" type="varchar" comment=""/>
+    <columns name="gYvVIgCoqqbpYPJ" type="varchar" comment=""/>
+  </tables>
+  <tables name="PzbRngoWIO">
+    <columns name="dMknn" type="varchar" comment=""/>
+  </tables>
+  <tables name="OHtyZJBtZ">
+    <columns name="wOzdnnPquVVIbNAEUi" type="varchar" comment=""/>
+    <columns name="hwbbuECQ" type="varchar" comment=""/>
+    <columns name="QdycFTvtrxDCnc" type="varchar" comment=""/>
+    <columns name="GnUWjhAOai" type="varchar" comment=""/>
+  </tables>
+  <tables name="qppOEIuHIKdoV">
+    <columns name="Hzqmn" type="varchar" comment=""/>
+    <columns name="PHZtOySIOVwHW" type="varchar" comment=""/>
+    <columns name="YoAMXTDmkQNAf" type="varchar" comment=""/>
+    <columns name="CLVDkfOM" type="varchar" comment=""/>
+    <columns name="ELOmeONFvJCHG" type="varchar" comment=""/>
+    <columns name="QnqWLHxSIRYzMt" type="varchar" comment=""/>
+    <columns name="pYuOXPc" type="varchar" comment=""/>
+    <columns name="tDbPYRIDIGQyVKZxS" type="varchar" comment=""/>
+    <columns name="qxiOUHNjeKB" type="varchar" comment=""/>
+  </tables>
+  <tables name="lpFcQWTYOwPeNgvst">
+    <columns name="sOIKwD" type="varchar" comment=""/>
+    <columns name="olROCdZQTHwrhiL" type="varchar" comment=""/>
+    <columns name="lTSLVcIsHEjsGBeNg" type="varchar" comment=""/>
+    <columns name="fxQQADTOmzqJxBMfyR" type="varchar" comment=""/>
+    <columns name="wBnLxtpKR" type="varchar" comment=""/>
+    <columns name="cJOmVnyUyLdiPHCIQz" type="varchar" comment=""/>
+    <columns name="yxmOmpQASvOKXY" type="varchar" comment=""/>
+    <columns name="qtcFefTm" type="varchar" comment=""/>
+    <columns name="GtaaEtdNVlpdPiDe" type="varchar" comment=""/>
+    <columns name="HctqfZHNshcSicTmMv" type="varchar" comment=""/>
+    <columns name="YFkbWQDlwteNQxan" type="varchar" comment=""/>
+  </tables>
+  <tables name="AHutsXLRFZWgGn">
+    <columns name="PVdXt" type="varchar" comment=""/>
+    <columns name="dMEfAeNMlf" type="varchar" comment=""/>
+    <columns name="waQrkyGSPktl" type="varchar" comment=""/>
+    <columns name="hhPOOBy" type="varchar" comment=""/>
+    <columns name="EtKBoyMfzlyytkBOBr" type="varchar" comment=""/>
+  </tables>
+  <tables name="liIQIyFkNMtFWWUU">
+    <columns name="ohIjzGJIqu" type="varchar" comment=""/>
+    <columns name="OrfsYtFAy" type="varchar" comment=""/>
+    <columns name="gllmIafKyZlCHyET" type="varchar" comment=""/>
+    <columns name="BAlIwlE" type="varchar" comment=""/>
+    <columns name="eSlQcmhKHMvkclx" type="varchar" comment=""/>
+    <columns name="gVsfzLAYIHJuWiDhfi" type="varchar" comment=""/>
+    <columns name="OVlITPHFNQVTtl" type="varchar" comment=""/>
+    <columns name="nYrtMbVwVIgPRnpX" type="varchar" comment=""/>
+    <columns name="ZlAkKKOrbOW" type="varchar" comment=""/>
+    <columns name="yArEnG" type="varchar" comment=""/>
+  </tables>
+  <tables name="FaXVlQfwATcvByEj">
+    <columns name="yWhrrVP" type="varchar" comment=""/>
+    <columns name="BzmgPQQV" type="varchar" comment=""/>
+    <columns name="tBiEMiTxTSMVaWs" type="varchar" comment=""/>
+    <columns name="EzqxtYVo" type="varchar" comment=""/>
+  </tables>
+  <tables name="npPagszZqiOPp">
+    <columns name="tWAAfVMhlebcATflecG" type="varchar" comment=""/>
+    <columns name="qkTEKnoGQOnTIJWVDdK" type="varchar" comment=""/>
+    <columns name="rHvcQArXMK" type="varchar" comment=""/>
+    <columns name="jdINzjLalyC" type="varchar" comment=""/>
+  </tables>
+  <tables name="RojwWZcVeRJejb">
+    <columns name="DRYWRxETqXIh" type="varchar" comment=""/>
+    <columns name="QoDfzgziDNqUUHRatDq" type="varchar" comment=""/>
+  </tables>
+  <tables name="AURAYhFdBsnriHY">
+    <columns name="OldTMSxzcZ" type="varchar" comment=""/>
+    <columns name="rINUbrMZoP" type="varchar" comment=""/>
+    <columns name="tUuVWHLzeIq" type="varchar" comment=""/>
+    <columns name="cSxVJbs" type="varchar" comment=""/>
+  </tables>
+  <tables name="qNKRDONqhbBHMi">
+    <columns name="RqghR" type="varchar" comment=""/>
+    <columns name="iiebwe" type="varchar" comment=""/>
+    <columns name="sFAprMw" type="varchar" comment=""/>
+    <columns name="UOPOPy" type="varchar" comment=""/>
+    <columns name="oLYbgDsFNxHQCppq" type="varchar" comment=""/>
+    <columns name="rYQmqJ" type="varchar" comment=""/>
+  </tables>
+  <tables name="YmOLOuCj">
+    <columns name="ZWPjFJkwZBxtEpVJkm" type="varchar" comment=""/>
+    <columns name="YKvfKlob" type="varchar" comment=""/>
+    <columns name="gwpDVgbh" type="varchar" comment=""/>
+    <columns name="dTwSmefKS" type="varchar" comment=""/>
+    <columns name="piqUDs" type="varchar" comment=""/>
+    <columns name="CxnBauorUGnmOKGSUbU" type="varchar" comment=""/>
+    <columns name="ZevVgeBnYeqV" type="varchar" comment=""/>
+    <columns name="ZdAAkGLxNVHXmOgc" type="varchar" comment=""/>
+    <columns name="dJSHY" type="varchar" comment=""/>
+    <columns name="KyEmqsQx" type="varchar" comment=""/>
+    <columns name="wvIRpEzeVu" type="varchar" comment=""/>
+    <columns name="efhNslbCaEKmb" type="varchar" comment=""/>
+    <columns name="xDWXu" type="varchar" comment=""/>
+    <columns name="VxiTWlRVHDYysz" type="varchar" comment=""/>
+    <columns name="vQQQMqwZqxsrMN" type="varchar" comment=""/>
+    <columns name="EAQRnFaWazwKe" type="varchar" comment=""/>
+  </tables>
+  <tables name="ctfGeOnAsMFCPiVAG">
+    <columns name="lrOYTgMLkdhJLBiTGKa" type="varchar" comment=""/>
+    <columns name="GSicmCdNsVxi" type="varchar" comment=""/>
+    <columns name="ezKyjQkwdKMlHSYo" type="varchar" comment=""/>
+    <columns name="rIEoluwcHSyQw" type="varchar" comment=""/>
+    <columns name="Pxiowa" type="varchar" comment=""/>
+    <columns name="HSTBzKSKy" type="varchar" comment=""/>
+  </tables>
+  <tables name="NFiQYLkTEWlIRzrfgg">
+    <columns name="IUnQCtHENdGMYoh" type="varchar" comment=""/>
+    <columns name="ujtQEyX" type="varchar" comment=""/>
+    <columns name="orXlfzXvquZHNPHG" type="varchar" comment=""/>
+    <columns name="ksXJHWKgyHiZnADsu" type="varchar" comment=""/>
+    <columns name="unKHeHWYKmjuCH" type="varchar" comment=""/>
+    <columns name="zOweIxKRr" type="varchar" comment=""/>
+    <columns name="BPtKzVyKUBqzr" type="varchar" comment=""/>
+    <columns name="tWWJRsbappPbmdzEoBo" type="varchar" comment=""/>
+    <columns name="BRsjWnTkAVgTa" type="varchar" comment=""/>
+  </tables>
+  <tables name="pkQuwd">
+    <columns name="nPqLMaBy" type="varchar" comment=""/>
+    <columns name="bxIdAqEKsQnFjuUrToo" type="varchar" comment=""/>
+    <columns name="smEOFWUsEWkeGztE" type="varchar" comment=""/>
+    <columns name="tpDLWHLophXJjCenh" type="varchar" comment=""/>
+    <columns name="JbtPRjJvcFAfFtuk" type="varchar" comment=""/>
+    <columns name="fLhCmBBt" type="varchar" comment=""/>
+    <columns name="ZUAVqvRuJUksBQhpi" type="varchar" comment=""/>
+    <columns name="OGEbKyWHnvYIPwY" type="varchar" comment=""/>
+    <columns name="KbVDHTZj" type="varchar" comment=""/>
+  </tables>
+  <tables name="sBOmYnvIuwwCwlPAFNR">
+    <columns name="HpNQqVT" type="varchar" comment=""/>
+    <columns name="kUcYp" type="varchar" comment=""/>
+    <columns name="lfZAgcqXx" type="varchar" comment=""/>
+    <columns name="MgBaSAiTRfqpUfp" type="varchar" comment=""/>
+    <columns name="IIXCqvc" type="varchar" comment=""/>
+    <columns name="MnFYSFhQW" type="varchar" comment=""/>
+    <columns name="vxOjcZdLCU" type="varchar" comment=""/>
+    <columns name="oNGJxPGngdvwS" type="varchar" comment=""/>
+    <columns name="WyJsSTGJxHwjwehSN" type="varchar" comment=""/>
+  </tables>
+  <tables name="vgEXWBlQNUbiSdtywT">
+    <columns name="nHmsGPuKaZ" type="varchar" comment=""/>
+    <columns name="ZaddhgpPK" type="varchar" comment=""/>
+    <columns name="VJXohvGnvUh" type="varchar" comment=""/>
+    <columns name="BLKQcnTFbVvXE" type="varchar" comment=""/>
+    <columns name="QSUuI" type="varchar" comment=""/>
+    <columns name="odjmhnLjwReNpBkU" type="varchar" comment=""/>
+    <columns name="UucGNlxOQRAbouyqBG" type="varchar" comment=""/>
+    <columns name="PlRHRSFN" type="varchar" comment=""/>
+    <columns name="RFHBCSJ" type="varchar" comment=""/>
+    <columns name="fhSGrjIKtI" type="varchar" comment=""/>
+    <columns name="kHWCrdqQsOfwL" type="varchar" comment=""/>
+    <columns name="rgCtoKURkcki" type="varchar" comment=""/>
+  </tables>
+  <tables name="NosMbFrgtDlrlsA">
+    <columns name="xfljdevGHQ" type="varchar" comment=""/>
+    <columns name="JesifAzcl" type="varchar" comment=""/>
+    <columns name="vnrriywfNNH" type="varchar" comment=""/>
+    <columns name="QiGhXiflIneH" type="varchar" comment=""/>
+    <columns name="KSlBtofJqKvs" type="varchar" comment=""/>
+    <columns name="KSSpXEoPoyQkgmDP" type="varchar" comment=""/>
+  </tables>
+</mysql:DataBase>

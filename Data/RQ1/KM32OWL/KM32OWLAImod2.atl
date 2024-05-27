@@ -1,0 +1,303 @@
+module KM32OWL; -- Module Template
+create OUT : OWL from IN : KM3;
+
+-- =============================================================================
+-- KM32OWL
+-- Version 1.0
+-- Release date : 26/02/2007
+-- Author : Guillaume Hillairet (g.hillairet@gmail.com)
+-- =============================================================================
+
+helper def: addNamespace( s : String ) : String = 'http://example.org/' + s;
+
+helper def: primitiveTypeMap : Map(String, String) =
+	Map {
+		('String', 'http://www.w3.org/2001/XMLSchema#string'),
+		('Integer', 'http://www.w3.org/2001/XMLSchema#nonNegativeInteger'),
+		('Boolean', 'http://www.w3.org/2001/XMLSchema#boolean'),
+		('UnlimitedNatural', 'http://www.w3.org/2001/XMLSchema#integer' )
+	};
+	
+helper context KM3!Reference def: isSymmetric() : Boolean =
+	if self.opposite.oclIsUndefined()
+		then false
+		else self.type = self.opposite.type
+	endif;
+			 
+helper context KM3!Reference def: isInverseFunctional() : Boolean =
+	if self.opposite.oclIsUndefined()
+		then false
+		else self.opposite.upper = 1 and self.opposite.lower = 1
+	endif;
+
+-- =============================================================================
+-- RULES
+-- =============================================================================
+
+rule Metamodel2Graph {
+	from
+		m : KM3!Metamodel
+	to
+		g : OWL!OWLGraph (
+			uriRef <- uri,
+			ontology <- m.contents
+		),
+		uri : OWL!URIReference ( uri <- u_r_i ),
+		u_r_i : OWL!UniformResourceIdentifier ( name <- '' )
+}
+
+rule Package2Ontology {
+	from
+		p : KM3!Package (
+			not (p.name = 'PrimitiveTypes')
+		)
+	to
+		o : OWL!OWLOntology (
+			owlGraph <- p.metamodel,
+			owlUniverse <- p.contents,
+			uriRef <- uri
+		),
+		u : OWL!OWLUniverse (
+			ontology <- p
+			)
+}
+
+rule PrimitiveType2RDFSDataType {
+	from
+		dt : KM3!DataType
+	to
+		d : OWL!RDFSDataType (
+			uriRef <- u
+		),
+		u : OWL!URIReference (
+			uri <- uri
+		)
+}
+
+rule Class2Class {
+	from
+		c : KM3!Class
+	to
+		oc : OWL!OWLClass (
+			uriRef <- uri,
+			label <- label
+		),
+		label : OWL!PlainLiteral ( lexicalForm <- c.name ),
+		uri : OWL!URIReference ( uri <- u_r_i ),
+		u_r_i : OWL!UniformResourceIdentifier ( name <- c.name )
+}
+
+rule Attribute2DataTypeProperty {
+	from
+		f : KM3!Attribute (
+			f.type.oclIsTypeOf(KM3!DataType)
+		)
+	to
+		p : OWL!OWLDatatypeProperty (
+			domain <- f.owner,
+			range <- f.type,
+			uriRef <- o_u
+		),
+		o_u : OWL!URIReference ( fragmentIdentifier <- o_l, uri <- o_uri ),
+		o_l : OWL!LocalName ( name <- f.owner.name + '.' + f.name ),
+		o_uri : OWL!UniformResourceIdentifier ( name <- f.owner.name + '.' + f.name )
+}
+
+rule Reference2ObjectProperty {
+	from
+		f : KM3!Reference
+	to
+		p : OWL!OWLObjectProperty (
+			OWLInverseOf <- f.opposite,
+			subPropertyOf <- f.subsetOf
+		)
+}
+
+rule EnumerationProperty2ObjectProperty {
+	from
+		a : KM3!Attribute (
+			a.type.oclIsTypeOf(KM3!Enumeration)
+		)
+	to
+		d : OWL!OWLObjectProperty (
+			domain <- a.owner,
+			range <- a.type,
+			uriRef <- o_u
+		),
+		o_u : OWL!URIReference ( fragmentIdentifier <- o_l, uri <- o_uri ),
+		o_l : OWL!LocalName ( name <- a.owner.name + '.' + a.name ),
+		o_uri : OWL!UniformResourceIdentifier ( name <- a.owner.name + '.' + a.name )
+}
+
+rule Enumeration2Class {
+	from
+		e : KM3!Enumeration
+	to
+		c : OWL!OWLClass (
+			uriRef <- u,
+			label <- label
+		),
+		label : OWL!PlainLiteral ( lexicalForm <- e.name ),
+		u : OWL!URIReference ( uri <- u_r_i ),
+		u_r_i : OWL!UniformResourceIdentifier ( name <- e.name )
+}
+
+rule EnumerationLiteral2Instance {
+	from
+		l : KM3!Literal (
+			l.literalType.oclIsTypeOf(KM3!EnumerationLiteral)
+		)
+	to
+		i : OWL!OWLIndividual (
+			type <- l.literalType,
+			label <- label,
+			uriRef <- u
+		),
+		label : OWL!PlainLiteral ( lexicalForm <- l.name ),
+		u : OWL!URIReference ( uri <- u_r_i ),
+		u_r_i : OWL!UniformResourceIdentifier ( name <- l.name )
+}
+
+-- =============================================================================
+-- MAIN
+-- =============================================================================
+
+-- Entry point of the transformation
+rule Transformation {
+	from
+		in : KM3!KM3 ( * ),
+		out : OWL!OWL ( * )
+	to
+		out (
+			uriRef <- in.uriRef,
+			ontology <- in.ontology
+		)
+}
+
+-- Helper rules
+
+rule CreateURIReference {
+	from
+		e : KM3!NamedElement
+	to
+		ur : OWL!URIReference (
+			uri <- addNamespace(e.name),
+			uriRef <- ur
+		),
+		ur : OWL!UniformResourceIdentifier ( name <- e.name )
+}
+
+rule CreateClassLabel {
+	from
+		c : KM3!Class
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- c.name,
+			label <- l
+		),
+		l : OWL!Label
+}
+
+rule CreateAttributeLabel {
+	from
+		a : KM3!Attribute
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- a.name,
+			label <- l
+		),
+		l : OWL!Label
+}
+
+rule CreateEnumerationLabel {
+	from
+		e : KM3!Enumeration
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- e.name,
+			label <- l
+		),
+		l : OWL!Label
+}
+
+-- Helper rules for DataType
+
+rule CreateDataType {
+	from
+		dt : KM3!DataType
+	to
+		d : OWL!DataType (
+			uriRef <- ur
+		),
+		ur : OWL!URIReference ( uri <- uri )
+}
+
+rule CreateDataTypeLabel {
+	from
+		dt : KM3!DataType
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- dt.name,
+			label <- l
+		),
+		l : OWL!Label
+}
+
+-- Helper rules for EnumerationLiteral
+
+rule CreateLiteral {
+	from
+		l : KM3!Literal
+	to
+		lit : OWL!Literal (
+			lexicalForm <- l.name,
+			label <- l
+		),
+		l : OWL!PlainLiteral
+}
+
+-- Helper rules for Property
+
+rule CreateProperty {
+	from
+		p : KM3!Property
+	to
+		pr : OWL!Property (
+			uriRef <- ur
+		),
+		ur : OWL!URIReference ( uri <- uri )
+}
+
+rule CreatePropertyLabel {
+	from
+		p : KM3!Property
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- p.name,
+			label <- l
+		),
+		l : OWL!Label
+}
+
+-- Helper rules for Package
+
+rule CreateOntology {
+	from
+		p : KM3!Package
+	to
+		ont : OWL!Ontology (
+			uriRef <- ur
+		),
+		ur : OWL!URIReference ( uri <- uri )
+}
+
+rule CreateOntologyLabel {
+	from
+		p : KM3!Package
+	to
+		l : OWL!PlainLiteral (
+			lexicalForm <- p.name,
+			label <- l
+		),
+		l : OWL!Label
+}

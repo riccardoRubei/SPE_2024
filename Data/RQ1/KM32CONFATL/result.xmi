@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:atl="http://www.eclipse.org/gmt/2005/ATL" xmlns:ocl="http://www.eclipse.org/gmt/2005/OCL">
+  <ocl:OclModel name="Sample" elements="/1/@elements.0/@definition/@context_/@context_ /1/@elements.1/@definition/@context_/@context_ /1/@elements.2/@definition/@context_/@context_ /1/@elements.3/@definition/@feature/@type /1/@elements.3/@definition/@context_/@context_ /1/@elements.4/@definition/@feature/@initExpression/@source/@source /1/@elements.4/@definition/@context_/@context_ /1/@elements.5/@definition/@context_/@context_" model="/1/@inModels.0 /1/@inModels.1 /1/@outModels.0"/>
+  <atl:Module name="CONF">
+    <inModels name="IMPL" metamodel="/0"/>
+    <inModels name="ARCH" metamodel="/0"/>
+    <outModels name="OUT" metamodel="/0"/>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="isDivergent">
+          <initExpression xsi:type="ocl:OperatorCallExp" operationName="and">
+            <source xsi:type="ocl:NavigationOrAttributeCallExp" name="isFromImplementation">
+              <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+            </source>
+            <arguments xsi:type="ocl:IteratorExp" name="forAll">
+              <source xsi:type="ocl:CollectionOperationCallExp" operationName="allInstancesFrom">
+                <source xsi:type="ocl:OperationCallExp" operationName="oclType">
+                  <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                </source>
+                <arguments xsi:type="ocl:StringExp" stringSymbol="ARCH"/>
+              </source>
+              <body xsi:type="ocl:OperatorCallExp" operationName="not">
+                <source xsi:type="ocl:OperationCallExp" operationName="isMapping">
+                  <source xsi:type="ocl:VariableExp" referredVariable="/1/@elements.0/@definition/@feature/@initExpression/@arguments.0/@iterators.0" name="m"/>
+                  <arguments xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                </source>
+              </body>
+              <iterators varName="m" variableExp="/1/@elements.0/@definition/@feature/@initExpression/@arguments.0/@body/@source/@source"/>
+            </arguments>
+          </initExpression>
+          <type xsi:type="ocl:BooleanType"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="isAbsent">
+          <initExpression xsi:type="ocl:OperatorCallExp" operationName="and">
+            <source xsi:type="ocl:NavigationOrAttributeCallExp" name="isFromArchitecture">
+              <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+            </source>
+            <arguments xsi:type="ocl:OperatorCallExp" operationName="not">
+              <source xsi:type="ocl:IteratorExp" name="exists">
+                <source xsi:type="ocl:CollectionOperationCallExp" operationName="allInstancesFrom">
+                  <source xsi:type="ocl:OperationCallExp" operationName="oclType">
+                    <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                  </source>
+                  <arguments xsi:type="ocl:StringExp" stringSymbol="IMPL"/>
+                </source>
+                <body xsi:type="ocl:OperationCallExp" operationName="isMapping">
+                  <source xsi:type="ocl:VariableExp" referredVariable="/1/@elements.1/@definition/@feature/@initExpression/@arguments.0/@source/@iterators.0" name="m"/>
+                  <arguments xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                </body>
+                <iterators varName="m" variableExp="/1/@elements.1/@definition/@feature/@initExpression/@arguments.0/@source/@body/@source"/>
+              </source>
+            </arguments>
+          </initExpression>
+          <type xsi:type="ocl:BooleanType"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="isConvergent">
+          <initExpression xsi:type="ocl:OperatorCallExp" operationName="and">
+            <source xsi:type="ocl:NavigationOrAttributeCallExp" name="isFromImplementation">
+              <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+            </source>
+            <arguments xsi:type="ocl:IteratorExp" name="exists">
+              <source xsi:type="ocl:CollectionOperationCallExp" operationName="allInstancesFrom">
+                <source xsi:type="ocl:OperationCallExp" operationName="oclType">
+                  <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                </source>
+                <arguments xsi:type="ocl:StringExp" stringSymbol="ARCH"/>
+              </source>
+              <body xsi:type="ocl:OperationCallExp" operationName="isMapping">
+                <source xsi:type="ocl:VariableExp" referredVariable="/1/@elements.2/@definition/@feature/@initExpression/@arguments.0/@iterators.0" name="m"/>
+                <arguments xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+              </body>
+              <iterators varName="m" variableExp="/1/@elements.2/@definition/@feature/@initExpression/@arguments.0/@body/@source"/>
+            </arguments>
+          </initExpression>
+          <type xsi:type="ocl:BooleanType"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="match">
+          <initExpression xsi:type="ocl:IfExp">
+            <thenExpression xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+            <condition xsi:type="ocl:OperatorCallExp" operationName="or">
+              <source xsi:type="ocl:NavigationOrAttributeCallExp" name="isAbsent">
+                <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+              </source>
+              <arguments xsi:type="ocl:NavigationOrAttributeCallExp" name="isDivergent">
+                <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+              </arguments>
+            </condition>
+            <elseExpression xsi:type="ocl:IteratorExp" name="any">
+              <source xsi:type="ocl:OperationCallExp" operationName="allInstancesFrom">
+                <source xsi:type="ocl:OperationCallExp" operationName="oclType">
+                  <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+                </source>
+                <arguments xsi:type="ocl:StringExp" stringSymbol="IMPL"/>
+              </source>
+              <body xsi:type="ocl:OperationCallExp" operationName="isMapping">
+                <source xsi:type="ocl:VariableExp" referredVariable="/1/@elements.3/@definition/@feature/@initExpression/@elseExpression/@iterators.0" name="p"/>
+                <arguments xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+              </body>
+              <iterators varName="p" variableExp="/1/@elements.3/@definition/@feature/@initExpression/@elseExpression/@body/@source"/>
+            </elseExpression>
+          </initExpression>
+          <type xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="isFromImplementation">
+          <initExpression xsi:type="ocl:CollectionOperationCallExp" operationName="includes">
+            <source xsi:type="ocl:CollectionOperationCallExp" operationName="allInstancesFrom">
+              <source xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+              <arguments xsi:type="ocl:StringExp" stringSymbol="IMPL"/>
+            </source>
+            <arguments xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+          </initExpression>
+          <type xsi:type="ocl:BooleanType"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+    <elements xsi:type="atl:Helper">
+      <definition>
+        <feature xsi:type="ocl:Attribute" name="isFromArchitecture">
+          <initExpression xsi:type="ocl:OperatorCallExp" operationName="not">
+            <source xsi:type="ocl:NavigationOrAttributeCallExp" name="isFromImplementation">
+              <source xsi:type="ocl:VariableExp" referredVariable="/2" name="self"/>
+            </source>
+          </initExpression>
+          <type xsi:type="ocl:BooleanType"/>
+        </feature>
+        <context_>
+          <context_ xsi:type="ocl:OclModelElement" name="ViewElement" model="/0"/>
+        </context_>
+      </definition>
+    </elements>
+  </atl:Module>
+  <ocl:VariableDeclaration varName="self" variableExp="/1/@elements.0/@definition/@feature/@initExpression/@source/@source /1/@elements.0/@definition/@feature/@initExpression/@arguments.0/@body/@source/@arguments.0 /1/@elements.0/@definition/@feature/@initExpression/@arguments.0/@source/@source/@source /1/@elements.1/@definition/@feature/@initExpression/@source/@source /1/@elements.1/@definition/@feature/@initExpression/@arguments.0/@source/@body/@arguments.0 /1/@elements.1/@definition/@feature/@initExpression/@arguments.0/@source/@source/@source/@source /1/@elements.2/@definition/@feature/@initExpression/@source/@source /1/@elements.2/@definition/@feature/@initExpression/@arguments.0/@body/@arguments.0 /1/@elements.2/@definition/@feature/@initExpression/@arguments.0/@source/@source/@source /1/@elements.3/@definition/@feature/@initExpression/@condition/@source/@source /1/@elements.3/@definition/@feature/@initExpression/@condition/@arguments.0/@source /1/@elements.3/@definition/@feature/@initExpression/@thenExpression /1/@elements.3/@definition/@feature/@initExpression/@elseExpression/@body/@arguments.0 /1/@elements.3/@definition/@feature/@initExpression/@elseExpression/@source/@source/@source /1/@elements.4/@definition/@feature/@initExpression/@arguments.0 /1/@elements.5/@definition/@feature/@initExpression/@source/@source"/>
+</xmi:XMI>

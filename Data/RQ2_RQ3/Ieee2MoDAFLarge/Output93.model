@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ieee1471="http://ieee1471" xsi:schemaLocation="http://ieee1471 ../../model/IEEE1471ConceptualModel.ecore">
+  <ieee1471:IEEE1471Model>
+    <system name="KZNJSThXrT" content="VfUiCduWZMUmtNgbvxNxltQGOWANvZoPadGfYdzTTShnehpEVogJcVtBOAtjbledOvWFImwgdmCzDkIfCObyRuZnPbHvKYTMdmE"/>
+    <environment name="SQL Server" content="Oracle server" influences="/100/@system"/>
+    <stakeholders name="HQOlAizpWCrdIUvBx" content="SVjpdrBHdwvURyHzfZKrcGrtfhXwUmpfhMmXpwtybYTfpbYMdJZbRNvBqnRIkSTTKqbkWWDGqoBrqcYeh"/>
+    <stakeholders name="DCFRskeAXoRiWeFEhPp" content="zFeUsFmtMuhURQxOFsXEYzlTLwwGMYnqsLqHAKXZVchyqnRIDHGVdJuHXXSfGvcVmJVvNiLuHunqpypdtEVkorFioVQsfa"/>
+    <stakeholders name="FcYZHObNxZKki" content="luAIYzmrgvQnWxwtehDwNjguIPYEwQVOfyNZcInvftqSCufEOSRsPaMFMKXmbLveJCcR"/>
+    <concerns name="sCUcTfNKfa" content="XIXCLmdSjAyrKSqRpNaVRgztDGNW"/>
+    <libraryViewpoints name="StructuralViewpoints" content="defines the group of viewpoints that defines a structural view on systems"/>
+    <architecturalDescription name="RDB CS" content="description of a relational database with a clientserver architecture" identifiesS="/100/@stakeholders.0 /97/@stakeholders.0" identifiesC="/100/@concerns.0 /99/@concerns.0" selects="/100/@viewpoints.0 /99/@viewpoints.0">
+      <organizedBy name="DB Structure" content="defines the structure of the database" conformsTo="/100/@viewpoints.0" consitsOf="/0/@architecturalDescription/@aggregates.0"/>
+      <organizedBy name="Deployment" content="defines how to deploy the systems on the hardware" conformsTo="/99/@viewpoints.0" consitsOf="/0/@architecturalDescription/@aggregates.1"/>
+      <aggregates name="EntityRelation diagram" content="description of a relational database with a CS architecture" participatesInV="/0/@architecturalDescription/@organizedBy.0"/>
+      <aggregates name="DeploymentDiagram" content="defines the graph representation of a model of deployment" participatesInV="/0/@architecturalDescription/@organizedBy.1"/>
+    </architecturalDescription>
+    <rationale name="DesignAndDeploy" content="defines the entity-relation diagram and after deploy database to a sever and define acces for client" provides="/0/@architecturalDescription"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="nrCKHm" content="HgGZkYEQOqxUwIEZdyzjUS"/>
+    <missions name="RBxHES" content="sFVBnKJHhnDRUtIhnsrGyIDNnOcnpnCEjojvwrznslUlSnxJNnnoeEGZnXcNkUH"/>
+    <stakeholders name="pSQkSdQkPnbI" content="QdVBmKDXTmShpNMMPqiMKmilAH"/>
+    <stakeholders name="VacOfRhwJEPZFb" content="bgsOMxTSQrxMeTjUHNMsSBbQUbuGeEdKueTrPOCnQXKFgFciRoTmAyD"/>
+    <concerns name="SCQXEp" content="xNIWUcZmiRbUOPoOIAMmdVTDhDqLOPhIWkqvbIHbZJKMyMIrLLHeZGLGm"/>
+    <concerns name="pqfrLDgvsVIsfo" content="EavwltPLzRdjJpcyLHWyjcqRtsspxqsZLpmKjIQgJAVvCUBEAzhTNyHfkftVSnXsngrqmJOsBSWDgsVaTwAvoOAg"/>
+    <concerns name="qBoiHQY" content="PCNOiQTKliomFLOjDCMskqhXuuWmVaMaSeCytaIQbFUEbPnhsXtIqZDUuaEPEowG"/>
+    <viewpoints name="kUCQSexBYBZdIwwwgyy" content="kUpYDzSCxzCbrYjrrckXsyFyqtaDpRm"/>
+    <viewpoints name="GbxhMkYodX" content="DBYMOfkguzgjKggKZYqgFeTEDThfCvKqGaAADWVmSzwvjPgPwvfZhlJrprkbAxdbYgAdlXLdHXTi"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="CWbSOB" content="fcVnzruqKcmNBFytbgPawS"/>
+    <missions name="ELOdbAuqSSvfwsDhs" content="xaydJnewupvOOxbSmRQhriyKZHPehJFhriUCXFdgSxOlwZWFLCreihHrPEseomzVSGPEi"/>
+    <missions name="vICcXa" content="KZdGbhjUNmsCltNivFRDgvwbzEXoIDuGyWgSClxXXUVvxshwPNYHcxTlvWaQFKaWwtVDSzYzQBWKJoOaXslSnksLQ"/>
+    <architecture name="bnbMcZaChfBljOUR" content="fXnSqbYxsRxWfiVDMaCTTuPYKiHlyosgYBDluQjOdhMEBQxfrxSQgpJww"/>
+    <stakeholders name="GjahOWuZuVqJvDXHQl" content="QxIxREJUrvJEbIdQhwcQHBtkCcYgoIHabbGGoZeEuGltmtKEeBqFwHgzqDfLymcNhRm"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="eVaGIARNZNaBftULhI" content="ohUIIAwpUVqeuwpQFZXgVozbkbiZcRljMKUNlwRydixYLYVoded"/>
+    <architecture name="HZvGDORf" content="uzLLRaUZRDkPUIbOcbMWB"/>
+    <stakeholders name="sAmdvodK" content="TyODgvkDovHlbmzAepbEsJSuvjnUsqOHRNTWOrsLVVUEAQGLtHDPpQPjdZykKeZTtlFufvGgGxcbtTqjVFkxzrwxwFbOSOENZeZ"/>
+    <stakeholders name="RlvvEfLBoMhiw" content="nNSARXVqQtcTsFPMzhxekatPfLxtavWjZiBxIejCVazoDbHhnlymzXtnGDbnVcCMjAaJAQsEnVM"/>
+    <concerns name="SnLbedCsuDfXtcKPPq" content="xzmIFxmPLZPqLDsciPuEiLBALcHYwwYjEozGSzzwRFgharCNvUIwJPygjqjhbjQaiYGXuck"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="KiCiwMjAbjYqBMlfp" content="ebOjQfhACODYpQTATWFmOseU"/>
+    <architecture name="mGHayKydivBeScO" content="YhChyeyIVXVocHnFnBcrDfLmYOoQHPtFUhkpLAFVvnQsqNApGpsALXqwvxuQKclPyoVkfQpL"/>
+    <concerns name="UYWZRyTaxfZHyHDIk" content="vMNJTmmNiYLArDnCBfeljhkOuHtWMXhxbdPotonFxhqIIfOBLVMEKaDjdIJyQrWmlHDxfoYcpCADAfarDFsEZifAqCGUagl"/>
+    <concerns name="MVdGJsOtOg" content="KsTcrHEDNqzUAEJiqQrcdEYNVTsDoStpMgmDlDoLwyREOHCQIFHvDNOAVfstaRkXEZABILYW"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="KRtwL" content="uyVJzpYVAtDpldFXhtEUihniyyWSMjmAWQDuyKvXsbMlVHSGYunZFbqUDSrIiUMoyrRjuaYzevdypddQqnKZnnnkdiuz"/>
+    <missions name="MbwzQIVUV" content="JKPEgOJScRxAQKTIShflNhNTphXwt"/>
+    <missions name="wXURqS" content="KNcMlvwCCELNfBUEtFll"/>
+    <architecture name="LbIiSrNizWD" content="RgqtybzxFaMctWNXhpPYqYyiyZlsQocBcgFIOnHEyDsbUJTpJgxYDoPDmkQWrcKadyGzzmyxeVJ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="URhFQMharhQOl" content="iHdZBUtnCmZZMVQdiedYFKyiWnUXcdfJBZCFUXtOyFMcFIRYOGURwbrBGfZHribCMHUViEQFMPCUSjlMqjjkyWPxuDbzOdGM"/>
+    <missions name="FpajKHqluzGZHQmt" content="SzdMFMxGzRoFLLKiNWniMEMCvrTPnOZHZvytelyIaYLOyxqhDNOWwjuqDYfvPbFANyfbMPJJudXPaHjWutuiLWhHIAGbsMK"/>
+    <architecture name="NagYAYxfgLbk" content="zROTKGYrytkmYHVihyOLmHwnxYiOpyiFGJlYJjLGTRcuagRS"/>
+    <viewpoints name="RKghcRuhZ" content="egWQMOLWpUjYksRRzReNOEkYuMQCMBbJKOynbzDbtvMZjiBBVJWVfKh"/>
+    <viewpoints name="wEHmjfKKnNtKusIjVQX" content="rwRbFNRaQHxgaRuOUevTAowwfzteRLOZZYlfQNVTlagKVWzEqlyyCvltZkJTXDzzEMYgWCDRPxFJFICeXdUxhSgG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="sPOorMmEnzJHoag" content="VTJMbZXLBbOwCbxtVRYBpbUdnHzxLKNtiDfwNMPUzbcVILECHdxLJCFwSkJcwhtgveouOFrLTqvYZvipVTMnVI"/>
+    <architecture name="WuTmhJ" content="eZVCABMDVjboBNHkOoIZkLJheFG"/>
+    <stakeholders name="XJDmedtvYJMa" content="ZcMVEpfSsNwCqjIeyAyRDvyQdEaJwXpdoHIzxaYpAc"/>
+    <viewpoints name="Qszyb" content="EnOmXXDhMVigRCUbGcRTDAFpJzWakkdguxpcaCcznitjxQSgHyZTJjDvSREYfrJ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="bCRFT" content="QKtzFnVDezWPvagvVjqcmSNVPeVziYExStEJIBweaYKjMADnGqeupKRfZRo"/>
+    <missions name="YziUpSsqtt" content="BjMyROITicgtskpeFxzQiIpEXVHXSJtxrkdPzFRBbKKNzIWvDSbutOWKaEUTFeVsURwLAIeyJWeqIvAKeFDJorUzdjeqNw"/>
+    <missions name="EZGHSgQSwBjAyiWZWY" content="eYakgVeCEmKAnDrtYlLzfhSgAnqCpbZduAjEqsfKFvHPNjHcexaSoUxKFTmPWHRYaBfFnvIBK"/>
+    <missions name="cdOtljGhs" content="rxsxizWLYWeYxarJbfgW"/>
+    <architecture name="uwmWZdykBKevYQe" content="CaUYmQxYEeiysMrXmVGBvLVsepknIQBeboAaDXAUZKZXWFaIQqjFBFfGGBMjnSdHnDfVmcGgmpoxH"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="nAvfVkXfnSHOo" content="RpycWrdlgfzKNVpLEYQZMNcLlHpuJOORVcKKpWmMbWZtxgiEljsNOiOLCwxTowdezcZPgbvZ"/>
+    <architecture name="kkDGeTLxUrXoRDNvB" content="ZCwPsGuscKffLXQwFYcttGcjdcRdxbVoYftZlDhJxCxXlFiDMDLwjFOsNIkLddLvfhUCfYRQpTZiOgiSWiGGaqmFTsgKnMTGRKr"/>
+    <stakeholders name="UxGEtidiqfQmOjz" content="nREKDIHNlWBBoducBPBwwhJcfdgRyrSuEkwPzhsTwCPiPVBphTpOcCDwFiQHghkbrXlGjJWqpkgOiyHXEnRNQD"/>
+    <stakeholders name="MjqtAHubBHVhITpKnIE" content="dpGhlNalWlmCexTOkcYPGxvgfUFTNmkoscSYNceAFSDimGIauHYpfqDpuDGrdDYWyfecpmsXocLuSWJXRKPNnEKlGswnjSDg"/>
+    <concerns name="YCQQVIdIeAGH" content="GONxOTVGYcBsmpwrDrNTfolHyArofPxfEaCofsXmELdoBYyvcU"/>
+    <viewpoints name="XUjvVZsMYQkwZpBwfmn" content="JRDDelHQpwywqSwQTCkeZJwNSZOUSwjsvivdUJ"/>
+    <viewpoints name="pnbbcKyJ" content="vrHKUyzLJGwAlEdzscUdQYzxCQixmNeshsuLptScNhAZtUVVgcZWzInHNfIoQbFXGZxhnOwtBdHyqycY"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="gPWYePXNAJmoNxV" content="ETGpbXtOzgDFFzOsvWDQBFTUmYlkSKJiTMhadgnMgrfWDTSzLERcJXCSCJKMvjHdeMluyQeGkpQbnpsfjYo"/>
+    <stakeholders name="VxcFMYq" content="NTvMQDQWlMZNOmqDNakvEvfOsCZxOFzPOVvfTxhcSKDNneNHqfDGrWzivztCpymzNYrznDhqpgdMVNcwbSebzrWVCplkWpHWcaH"/>
+    <stakeholders name="EMixzTpdbTCVg" content="lGeuDVQaZqTkypdRfNrTtjTcOqYzL"/>
+    <concerns name="YCUZgUKTqxuM" content="JHnlqngJqTBxOdtXIxQBJGi"/>
+    <viewpoints name="zHpXSZqk" content="zHTXnXCYqJkLEnwYFJoqSSDaYrhwTPdlfoxFqke"/>
+    <viewpoints name="HXYJKLwzbMOodapGO" content="IaidymiXJIqoakVyEqbYaqqNvP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="OgHOXBxPwoJczTiPCgK" content="ABVPzdyAfHSssHXZmWVISX"/>
+    <architecture name="vVmTvOCxbg" content="LfmxsmVIErfvYooWdayLQDAHyXgLtycIVoTBxEgFtxbiaQSCxXCilSamqVSlxQLeaoKqazZORCXIXGCcRxJNVQfAyEkWleuK"/>
+    <stakeholders name="iRqcRAYLXCRFoAXtrLO" content="xCKbukwlVnkkvKbjnuRFXRvqLcegnpETTCtV"/>
+    <stakeholders name="WHjeUWbxRb" content="RsvshBERnLkvpmgYFOyxqYYEgmbpgrGzFRqdpsUDzVUyMjUAjczfyMAtqNGwUqTgOUa"/>
+    <viewpoints name="xomFQXIihVbSym" content="HBKTFzshxgtqvLTdHtSNgjwLvBXLZzPejjmSmzUygqRHSPlOBWoZYABqAzBoekbHIQAubjsiSSoaATYXaNpwTmayf"/>
+    <viewpoints name="houByLBHIwO" content="sFtgpjjiFeMiOsYNdyRPQNZnoficMhoOgDGRZbQnthQlWoifFFvVdwdxdVmXnBCnvYs"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="SzhcVycHdRW" content="eMlkCeiIeOuwhGWmMqlmykZWdjkLfsE"/>
+    <missions name="RNRgzPLLIYutYyCqNb" content="sLeiaoZEsqTnUZMCfVdWmgFRSphwiwJqQbgjfmJXsnLyZnuQ"/>
+    <stakeholders name="whwudCZMdnub" content="pKdpUYKQaupWKWCZqLDJsJ"/>
+    <concerns name="xxemnuMXNvvqWT" content="ycXwPkdyfmmKMuXUcGVwHZoRerDDQDbZVrQF"/>
+    <viewpoints name="zpcvokaORyESiBFeWGW" content="ihAxqPDrPcpVthcehyPKUUGZBGaxqSRfVAoZEFqzYVwMRCxxWzuykdJdMjzaCMMf"/>
+    <viewpoints name="LZJWmsSdSPfPXxQkAdy" content="DQNeAYsPvydbPwZXXQqAGShGhHqlqRERWmZGVDyAfHHZeUV"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="iStCRDwjctZ" content="KfNEvjzRiNcOUiJOKvHOfhDHAPWftukTwrctNgmy"/>
+    <missions name="SpGVmGexNC" content="avkWmbIIbhldvgUVbpMsCEKmdRdkKIiYGwnUjIFAMseXVzHftFdBkZFmXfdgnEVa"/>
+    <stakeholders name="rMNAv" content="DnIzdAGZUMcqAPHWHQAfwaUeWGuXHRkVlDzpnYDcUcGbHSQsfyqEeSPqzbEaVmxXSLuZcsSzJzkKRnIgUQfK"/>
+    <concerns name="rwmYtDbNTsWl" content="GmpXMapSRVFJgVVKxoYkmIGfUDPKmNJShAPjEnkBWCVFgamCCyHWAZDNIRvUaQNizmFkmpNzOQOSOt"/>
+    <concerns name="rCpNGL" content="ABsdJtKxKfdkANBWcKXLJSuGfFyjErSlgnRKJhftbBrpFMaOfMhYcEGzJbSKsYmabEpgnqADjon"/>
+    <concerns name="yGJmMj" content="dxCSnOMwuvthCsLKXKQxoRhznKsmSrSgxIBnZQWBszoDgdxoHRnYrlrPtxmIGlOxfMaJmjtFqFLmhdGLqb"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="cLezhqYDFkNBvxNL" content="WDmOfTBISGBKEqDJGzWJISwXFiBYsfOlfMqvMDVcGgNjCyBmXXFNCXt"/>
+    <missions name="tDxUkSSfQdKNy" content="ENiWRpSgkrnTlemrHYLPVTDqUmrNFQFCrskSdPWYfCHDfvrIoHSntZhpAvipXHuJyCHZfnBCtCbyxkbcfwnJnYbecvQejU"/>
+    <missions name="kkvbWOJYfISkGMGmPoK" content="RnXIfAVsbWLKPOtBLMiuASaQXWyklVpKBtFXahycahnTpHXBSNhNQzchV"/>
+    <architecture name="rvObphudEvYX" content="HZueEnURCflnAIkRDXQq"/>
+    <concerns name="AaVQxffKsIWEq" content="WuotkbzGZEzlgKPMJfeFSgTTBJFMUvopOy"/>
+    <concerns name="IqfhIKX" content="ZbCvcPvSFAOkEMXjasLMrplhyCDDAEdtGivUOlTynVYmzEKTXkRehbGVQFNwfDjuypGDmtTeJzKWiHhm"/>
+    <concerns name="WkYqswSHWYxMUXiPl" content="HUTNHWvGKaECcscnjRigbmHCPYlWGvKLoQDfonxKiOanpvlxLAbbZGkIKhoSJPlLDumkifqSDxRbMmWiTFpskhwdQFTtCmrTN"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="YqfpmnE" content="CsWbDAZpbBIhqIHbWmvtJ"/>
+    <missions name="WPLrWrX" content="iFyuFATNlVZkzwmrTytBylrBOBuBFKeGwZeuzPIyaKrebQUOSQrymMuivvLwuGvzqMzSNZzhqSTXjdmgOPIjVtyvhgoWHMYB"/>
+    <missions name="silpjhs" content="PjFCqzxoEPDkEuMrflcRgFUoxTJZfmgAnceBfvqPojgDLKqxUqEohPcrCoalyOGPmYPyaLGdUPZhRHADMhazez"/>
+    <missions name="ztpvMIf" content="tjMRcKbytbQWqEhLIkpBPARreGQLarMbXRjIeonYDRyFAmsxQDPJaqKCDppxggeegodGUBBLRH"/>
+    <concerns name="ZENvbZcHiPFrikXlO" content="hOpDgOSkDFIvlOfmXqRtJQCzqtBJQbDKuYeSWKYSAznHxgIybnhYpmpeSiINRHVUSBSVIXhUjFnzkETm"/>
+    <viewpoints name="NreOxru" content="HzflKsxgPctKfQAyjULPSlvJDEWRLeHrcUMVMUQonTjBLDzNskieNqQtwClctJXkcJZBteHZ"/>
+    <viewpoints name="miYbX" content="YwholMHHlecQwXYfkccOkAGJfLYIOTnYPonVeKyzOTOiyJFcCBduhJpvlgBoGRkTytNJFcnBijvXTNIiSZW"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="kVmHVuCuFiIgk" content="woQkvwGAtnXoIQSXNddHDoWLmJoKBqLiaaSSlWOusf"/>
+    <architecture name="FABiwhQRciEdwfyuOx" content="cQawQHINlWUcCdMvEGaPceEXGIpFurjsWefuxeuTrBGYhMfyiuUUg"/>
+    <stakeholders name="bHiGIR" content="TbVIkArqhbFQSuxBAbNVYukAmzloMHTFcUkvE"/>
+    <concerns name="TzsvaeTT" content="lVYgJKHlCeCImtBAgBAfSubTpbEqHcblvezdsKHViWVBo"/>
+    <concerns name="bShaFTsrkwRX" content="zOPsCtVMhLbuoDDlnKBmDlHWpTCjdlIHuoGAUdSpgijjLVlnrDPaHCMFyfHBTroQf"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="uWNorJVoynBIizuly" content="itVVBmMSxnGJOHmTlpRAlJdBUIxRgLmE"/>
+    <architecture name="fSjwHOQzBvWeFm" content="ERNPvtQmuIqZgqGKrldLYdNTXnLqyPMX"/>
+    <stakeholders name="qwgbXgyEl" content="agayNaxJNReQuJAIUwTzupWWFDgVXvPkGpyfLzPOwUemvhVHlZtVriFNqrLfzwhSLvPeYCd"/>
+    <viewpoints name="QhoNfLzW" content="CKuTCpZQGjVMctTRjqxgSprDJYiRHhdXKCXMEVtoBPPiiGqCouanFjXOWkCfrwdZZSwlLbFUefEmAyXwTQVEUd"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="HPLYKQCwB" content="LDFTAYZSlKGGeSEkQIvwFHIhbcfdmRLvFBaPwnJnMUrwZJQggbhsJZpRfUGR"/>
+    <missions name="GUQtMbxnlg" content="wDjFjdHPLSrqQLalZBGmJOkzYWmyoGLsJrfTXWFalciqepPZUYUyYShMDFppuJAOWNltmMfG"/>
+    <concerns name="ILzjPjVRUTuA" content="UwZxVxVLAFpCarvRcfWDLcMWucMzLgIUQXJJvEnwEmkhYVzzTQmrbmKgbyexMndZ"/>
+    <viewpoints name="lxYYhHkPrcNsylMiH" content="zEDVXGfnjqERZBPumCyWPsaeeLrKDUxccBKoqkZFrCUGXLdvRqLQwHrRMcOMlpOIADyYNvhJcYzOFDLTYxtkh"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="cdBhjGIytKkiQTsJIvm" content="tsVKiZymjABdczIPwFvlbtyRbaV"/>
+    <stakeholders name="xRvUv" content="CPvoWStdnJqLZTOwuGoSuzUZsSHJiXXgMcnVVqsKfBgjCsJrlYQlJkWfmTScwRRvLcQhrBgxqFGfEMahTfQBcnwx"/>
+    <stakeholders name="XTSCiYkjdipK" content="TbfPGQJsNXhoFwHgoeITWazZvYDefMzryXaPrYUmNJecJhBnkMSJEJzUCECikpCMljsobNqvgxqSee"/>
+    <viewpoints name="BJQjSyJWFtq" content="mqzAMEmEHQFXaXioerfKdDmHgJFoKCI"/>
+    <viewpoints name="yqCsDbAH" content="WAhomjCiUoIqDGqcYlTWiVtWqYnjURWYOxmoZtDpWKrwbfeoBTKxpMFbDQ"/>
+    <viewpoints name="EybbeGeqEJhuHRM" content="HowFnyccSMxOCCkdJqEbKdLmkQxHTDHL"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="FMCmWIzJp" content="JhIURfgYtNNBPpwoUEWE"/>
+    <stakeholders name="HzKoBuFY" content="wHKuxsxkjdxTbJzCXyoiQlusQtWsvmjI"/>
+    <concerns name="tkqZt" content="RtoTfvcygcVOWNETqhTwSnhJYdQmrxMBDOGubrJUtZk"/>
+    <viewpoints name="eLHuy" content="HZTgSvbSMeESpjANGeuMsQThuERxZwocqGTSUYvANHRvxajnHIvoyButtNpdokdAGMOnhNEVGfqxCHdwU"/>
+    <viewpoints name="LbFsr" content="gcoqMVeqSrIqtgQvlvKEzWXkwniancnxGnWjvFfbmJJkpwsGzCSZSiMiCOCNAUTdERwNWZbPjAABFwuDdHRECu"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="uNoxwZfTHjUB" content="ExawCIWMMUfuPYtWxCdzMNCbhqOmxbmafzcJYUBFmfimfhYs"/>
+    <concerns name="LLoWsgk" content="XrSxGfAwEsTWLpqdEtlzGNwTczENXwOgilNcZruVtwTtwjIvOPHVSGbfjByBXnWpwky"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="nuDCZenJJggPcxBdM" content="jgFyBHhrLCBbaeGqSaOhaYLolsQCIRFXwplefbGZcNJMDXdRpASKIGkxieRggLUZio"/>
+    <missions name="xoLexDGTElmO" content="RVDILLPSAgmiBlopwWOnItozCKabCnMcijQsIUuZgQOWSXUdSApqbeRYN"/>
+    <architecture name="YSSeUBT" content="xxThBLzQVEjDEIqZUSyJDcXkhUaPWqARqmlIafFAWtlnIcnNgfkYEHkmocKn"/>
+    <stakeholders name="TxIImlygrsNlltmrM" content="UucMthdrTQDhvgCNTwmxCEwoExgGkXOqNCaDZtpYdoPPUKcnKaOdqONcJxEPUCWOQzUOmryCaFlQsmkHIORxguWgujtywbOKcTU"/>
+    <concerns name="HVFjEuJRSWdTQcJEAsu" content="eOxUleSawBIWeBiUmfwcqEQrXXPlNDzBIbNzudueoRAUqeiufYBdMdPZV"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="GNooqexVflgaoHDN" content="kBICZXxmicDXLkSfesuSsAvFMtqXKNrlzSreLqydNBeZJQvdNrl"/>
+    <missions name="ELhHB" content="jZwyuMokYucxItBPIvBaxnSPzODYKAcuByNJhuAnIMYkWTnSMKyMpWVVpbyGpyxALuQWqniLApDPQ"/>
+    <architecture name="pPQtzX" content="oWyPTfkYlanXMWKqbwDkzBvrbeefQrLOWNXGLaNeUOmVsmFfXnklIVbzkkEmyLmZoNMhfIQbqerwoueJK"/>
+    <stakeholders name="sPYzuOoPQd" content="BZGmAnGTRuukSLvLkyjexmMylLmsXuAiDKKgWhqacqVxxgEzcmrJmfadumBjkpj"/>
+    <viewpoints name="jeXcsLDxm" content="jneAZwhdjxPtIYvSZCaUIUTgBfratP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ICUIg" content="sffBppCsONLimESIcGgZaMcuQwOUXhkFQrLTRNpxeNMBCQuZCagpLYrCJelraJUQ"/>
+    <architecture name="AAhVnazoip" content="gOIyjrOhzWjrMRENpjNUvEWwXBOlDCKhyxwaLUqJROIHQSPTZm"/>
+    <stakeholders name="pgkzirC" content="LHYPbKAlvBEiPjVFrxfkXtCWHQghriwjwcQAOgGYnIubpZNWThG"/>
+    <stakeholders name="GyWRfbBwEYGKxpvZ" content="OwfKmpvUayOAydiiLWzIaLs"/>
+    <concerns name="kSdvAgshIjZgxLdhc" content="rnARPrJMNuOwpSAAxgdj"/>
+    <concerns name="uBeCRqWf" content="JPtkbDJdAzFvcHGoCqEhmTEgXYXIcxdxmWIbkXasQIVfLAgCjfVWTQGEMhYyrGJwXeHtRtaCBELlTnUqGDWCeL"/>
+    <viewpoints name="dQkGfoONHcaYo" content="eYmyBepuGKbZgjtbpiGvvoOMzflTvhYIJLHPcbOHUrPEVlnmIoCAfDhCBgzkwnzeGvkvWJsSt"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="LeMJocMD" content="BbjYhiTQmeNqSZTAVLUwOHcDIbyDYzl"/>
+    <stakeholders name="WaBpJgqNXUubrf" content="zRTbwYwhHRBZSRFZNWVzOAmLRIVcMghsoUMrWWDgZrlrYDpQhuG"/>
+    <concerns name="NrgiJOyRQDZyNIoiv" content="SpLhnAMPtZihWCqvmhObNBhEXfJlbLZhuLDMSDicwshaEEZyqrBmFKJWHEzshkgloTBocYsLzryHQfpuKBaeTVrbYuj"/>
+    <concerns name="PFbLgJMgxoYgnKOXki" content="QCPjSBtbiMKxIRuVycnVWynXU"/>
+    <concerns name="yGvkEBmmNGlMycErG" content="xTyCPzCMDfrmFjbOXJFHScQSoeBJoQzMRKir"/>
+    <concerns name="QSgHmrmQyDTw" content="JUMERBAEiTljErfAcEMViNP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="wIBbTyoOXlcQ" content="WFLXdpMHInRqvklJNEedSAeJhCuFHhpxpbVDAvosRjqqUaOPcACeyuAaKIRYfnDbXBygWMDzMvoYIqJwvIj"/>
+    <missions name="jBQWVqG" content="lCvinwZRGUxMbfwTtTxqgqdwxxdrDGXITqWcJNMeUjrWgTdJOtQcNauvRJWGQxnAvewTJlDOvZhfOEhMUhGsAquSzQmhTyYebN"/>
+    <missions name="yjlcIsrzejqZsapVHTn" content="IytNQHraBYUbYqLSTNbXFtQhOsgoqxaShVpcfZsdUZVXRfOfOpRaGkDvGKqfgtdIPxxj"/>
+    <architecture name="vYlXepLtaPMMXurDd" content="XYQCCYOpsRiVDQgdokZRxxfeBdAXsszisswySWLsgMDKeVEVnEUetguzgOSRZmvutnWVaMiMapubYLKiXWI"/>
+    <stakeholders name="PJVikGhRoXud" content="YrEbRxzUxjDQANszKbJlHylEPSOMMChlnItNfberSvbjmPLqEvVjivLtXycDvUpQhKTkQRUTAxOUrpIr"/>
+    <concerns name="EnslHPLvNNiZo" content="mSsWsBlpcsMdVroXdpuCRYdtMTkkdBOojWdWyvMORYE"/>
+    <concerns name="zMaUpP" content="MWVmxNqdiISrSYzduQgHWfzZqbZCtXhKuGkDTkACF"/>
+    <viewpoints name="lOKIbwEKMxvmMQ" content="KjmgaBjpoOmBCPNRgCLOVAwDwCNxsdXbZXLyPKKawvHgWaGgzTQZ"/>
+    <viewpoints name="EwtAefVwz" content="mdORPWvICquuLtsDPyIkNWwKRAfSKZhPRgYPSoDhDNAvWhQdxvAahVxslrrSmRfotezSSqFCtcKSM"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="fIKDKPOjIz" content="gPSkLAOidwBymEhrqQyhacuYaOjxcaKkkAMtBsxiDAhyFRWKJ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="pzhnFFROAwNmQBkkYEm" content="IGpaXgGuwQgeguOnOuDUIBoFOGEzyYljMzVPSdmDcoEdDwPQnBZvkrCoKVEMcNEwLxdoVNGDKgElLHovDLTKBbjwzyqvX"/>
+    <missions name="wQddsRQw" content="ohSJuJRFjuYnpYoyYsvXliYgjqZgRrWjSZuQSKLSVqCdYXbfzGJACxf"/>
+    <architecture name="MXpbKSPssRL" content="HVatDStUquhaCCfyuZJRoJDoCZLemJI"/>
+    <stakeholders name="ggRSaxK" content="CfMIQxduEDllcLXeIChBAuN"/>
+    <concerns name="CEswCtsfl" content="FpEdYrDlGDgVVxXiNskmfwEUsHXBxsaOfeKhLAkIzDMIgyDvJpeiezqljStwjmmdyFLLSAOkhi"/>
+    <concerns name="rvvRROaLZCMgdyfs" content="nrpWgTzJdTLpVmLCIoQzwCfRPStvIlwlhJokKBLTfQOtdiejyY"/>
+    <concerns name="tKntHiePbg" content="pQuyfQdQWxSxqQtzQsypMrAWenOrIR"/>
+    <concerns name="AnCxwslwBSSALTuj" content="NFltNdEBBUgWrWOJUXbuXNYXhgjuFeWjETlJaSExxmKsrzKEwaamjaiydFRLPAEFMuvNILmincogOSPudJchdAbyB"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="mYfJBQOVJuDaMq" content="wMWDeZofyujZMUTvHkjkuoOMAoJsWCdteiigjGXhTGASOtLWdIhfbAluwAXtVdRjfNefxdxTzKxFMWxmnALqdbNkpmteiFOq"/>
+    <missions name="FVqSUYFmB" content="IRyfQFjpcANtnlEDKmYtNyXKvyRSulpJTMZuqkHRieqswPkFXtkajtMwagbWNprYSbxsLvkKLVHcU"/>
+    <architecture name="XtlutRYAxrDXZkQx" content="MidwdRxicVBnbHDzEaoYhtiXOkykpmwonMcofNUJJMPpIcSxGZSleePwqwJmtOiZizt"/>
+    <viewpoints name="aDBUmLhltEjxg" content="QXThbZkLxgFTphaifuJlEWiKIaBfJlWZRGgAdopdizPoUOmiHyBNBFLVFNBvuGaSloYcqRBIhLzUNsi"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="wgMNixdUy" content="UMtqsDimyOoemVpFoLuBeMceIVBdqUQLZSDlItHMFAzdebhgvuwTdOQAwiPEsIIDOwJ"/>
+    <stakeholders name="kvZxk" content="GnyveXpqRHzxRjKOeLWbjYUVpzpzWpiCIQnteFsgQNkfVSDNNXaJIML"/>
+    <concerns name="BNgSxmQUgdrLHN" content="afBJLzIBmTEUgQPffipytaKBApLjsqbtlJcGxkCXvvDleKkxPneptbZYWZtByvNQrrnbkhBBcmlpSiaHqbqbG"/>
+    <viewpoints name="snYXbZzGRcCo" content="DouuGFCBGVdNQuSECxjZYCAALVPyQjXKHbRHYKbJDWjfEXOdzsftDNyzXfRDGdyJFqTlqRooKWHPfGKAIpcsvWgWUqsrugMDs"/>
+    <viewpoints name="rtpNE" content="loxwtqrquhguvydlHNulDjpzXpXQiRQrvfBIGjtRypDsQKLX"/>
+    <viewpoints name="cKftyTiLqelnaFMKh" content="IrbZCcqLafYMGCtnirHHXMZelKfFdS"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="qORGjoNvgVVPvw" content="gyRUyYlRfuhiteFwOeABrYRUbvVfdRUgovHPJdbJz"/>
+    <missions name="eUKFxCOU" content="UzdLpaRwRtvdSbcxNMIZA"/>
+    <missions name="CjptMSucRAqoQobLVB" content="JoeJeCHzsIRRbXDHedFLhqEpUdVyizfDiyhdgofwOTCGCOsKYhXYuyeitqxtvPAEJKybhwFakhAPPyDPzifkWVKTVIrImWbBkyZ"/>
+    <architecture name="CdAeGTePPelkDuEJRZ" content="gvVMnnGMSBJbMxlFCfTdrgOMetUWKojqvrBDwjhpkBabusHYVIhQolpxKkTSYWWCUXFLNtOWDfyOAYI"/>
+    <concerns name="WiysBVaLUbCvVxyMnmt" content="TPADoyKEcJhIFRNugvwhFVrUmxudrRFoKEaYWtsDgaKMSDWWzARhvpG"/>
+    <viewpoints name="FyLiClhZNu" content="miejaWjtwxeYnsxHurFIPRxzKbibNrjAQmQrHalgsCwWNYJXCHfCuNuqOeTYrORiBFLgeTpmmbb"/>
+    <viewpoints name="EFqlqVQbLjIxjqggYyd" content="XcoDnloOCYidUPnAdCjLQDszToCkwx"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="TXtofjR" content="fIqteLhavuIAqMZLJqSEliEkcEPFBkxpWuVjeXfMGZsouprlDxhkWvFciZW"/>
+    <missions name="wnsdgUrzEZNJGYnrREo" content="GWKiOBpAYesTvPGnqIOhmlOB"/>
+    <viewpoints name="UyPRRLTPCTIZqYHK" content="SXDSZgfKQYIhDVEtFvlGWYUIceNhiQNhvTscqSjGADbFVAaXNSfIGG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="SopMdAK" content="NRinCiZgDYZDLANMkqxkVxocj"/>
+    <architecture name="UjhasZFQx" content="WgRgwEqBwobIxxSIRyAHkKhpFuEhcxRiLmfdqMGHhKAENcTcwLebemtrvkDmnknGTU"/>
+    <stakeholders name="UBCBPBvwpoqMra" content="BICpVgfVctSiokGIgBDwHvAQooFnqfJHFiOxkaByBRfSisgohejoV"/>
+    <concerns name="zbaJjOeGthNmWj" content="HbXHwpMpiesIKwLesuAoUgIQkSlInmJvNeTjKlTmdNSUzxdwzoCuwpKOjssfbpbPVQKKyvG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <concerns name="nGjOg" content="udZkHSsxSzRcCnbBxKTLiiahLaKeiTfsAJNkLvpjnlCJnvYrnsUPLl"/>
+    <concerns name="bFzamfvPfYdeu" content="QoitklADiBbVrzqrBsLUaCeHNDNVWpnNZIcgZg"/>
+    <concerns name="hbteRKLkwEi" content="mLAdnyamNKnflVmmfQGHeuTXoGZvSbP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="pfhcQjUcTECrjr" content="KaALEjTWzUsabaBWDDQQcgkptfhzDJZrAeqaUJimDqTRGXtCJOTrxQXitnetLNDnotiWkKSYryTJZpH"/>
+    <missions name="AYdbcIO" content="joarDVBvIlkzkNxlYBAnkrLXuNQmfBfesmJXZlpFGvmssNLQPTVejXtRTNAMBADOWqq"/>
+    <architecture name="iuAdoSFDHbruPV" content="SaeOvdLVvJmsYHMZOxuhVwNEbbSHxbuoUsNZDrDcMZmVcWyqBuYHq"/>
+    <stakeholders name="QLzoRIeXNYMUPVrlbI" content="UsuGhltvYGgGqlNoGJOkNS"/>
+    <concerns name="chaHrkb" content="KbkNfcHrkNWjIquefibjYndqyUtPrKSBwYAFkMYZeeBPSbzuwGXhWovArl"/>
+    <viewpoints name="uTDsVLat" content="oIgZvoQppXfEfXFXBwYkgATtbUJUOTUZONskidyWjvyrvmNgTWBTeImwUNLdXhPcdlWSxZzVZe"/>
+    <viewpoints name="fbwuZZr" content="xQanbNpnPVWnKKJsgBGQPdj"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="yQifKRgIMSGaHfaDT" content="cahFLUbNAAmNMHfUknRwzvguAqflGvEiSYVirQxWQytAWYbfVMFFESaQUkOkbPWz"/>
+    <architecture name="fvUrmMX" content="biaBUTefsvJiXFtfWkdYQCcXDINLlWGrJjbRszCYvBfxstPYDfnXvuYhRXXkLqskTSYVwkRqykSMWNIBisCRLUxKtQPChNo"/>
+    <stakeholders name="uZIpZbPPIMTbiRCXT" content="hTFNHfNjjAzoISEfQfiXQiWdYwgmHXhT"/>
+    <stakeholders name="xjdYELMXjOCKVOZdmeW" content="BZpUfttmydLnGLdxeKuAJFEAMFIoQgmJLQAdIHVqug"/>
+    <concerns name="bvahrCxisqedlrCuvQc" content="nIMGJsYKfJKaQqOYpmJEcVFAWiRrRApJhnNfaebFLlCRHjFyahJTYref"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="KkKLlHVxPUmsGasVdFt" content="GtjPMOOnlDpkSXPczBseKgrVSwxHoKghCjExfBDBpWmDCJFAeGTTmBtyEJPepvSUZptCx"/>
+    <missions name="VgHWTkLtbCSUyvMQp" content="brVQQmiwpFkXulSmbAyPSCTkegOdmnIGEUBNWuvwBxEMuUbVyFgMDaEFbxuOyOaIlbSYLydnRscWDUxUrCxiAfRbosW"/>
+    <architecture name="tFlcuRbqokoaL" content="uvqETMeSSNToCawrBpjwDuAkjSUXdkGaGTXmcWXuqyFSj"/>
+    <stakeholders name="aKHPg" content="hJeIvaIxQBMwQArrfLkZyyepVclUkfIgXuehftJfuSIb"/>
+    <stakeholders name="NECtGYric" content="qbNJcPAvUcTLPipmexKMytHBGKEDVwVZ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="FYIrX" content="utBUYkgHNLryKQIirlVnTxKkzXJkaRxBftHJoMupoRaGASOppblBoAFEkybMOWgCVGhsdrGnWQNUnjARPfpmLjwcfEGWswearP"/>
+    <stakeholders name="fJVdekTAU" content="voodhICfGjNVXwlSQBpPNhPoEuqtRAURmqAfwkAQAUMgEgDbkyWhqHsjVODdYkPTDwuPDZqLiwuXWjUskXedXQMfr"/>
+    <concerns name="zUuxXS" content="JqXXiMtONgzZoRhKGjvGUNTZIOeTacedftqCmGgnaGiwyzPMAzCxZpjKEDThwHUqezSJgTHRS"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="TNxiwBgG" content="YwupahnuQYyYNOnhavhsnSCCJ"/>
+    <missions name="maPHSVsmEhP" content="udzMSnhCiGBscNDILRjnQQfFyUSCIFBRgRDJBLDknERjWWJccSxdRHLPfUtyhUJehwHEa"/>
+    <missions name="uDdlkBnOemZJode" content="UUptzsqfIBFBiEZjIArpDMlyBHlpCtcnriZiMRlyihiS"/>
+    <missions name="JlhJGoHwxgleQT" content="LxIfvwrTLuFKGHGAuVaDnObIxdFnnJeiVFcEEXskkFyk"/>
+    <stakeholders name="nmwMP" content="yCXTEyLHAyjzMwHBCBzKzryJoRTCRidFIpCapMvleSVOOWugbWXhoaQwGvregsJeInCKVzbbRsJayxEmyGlz"/>
+    <concerns name="DctHZxCqYLwsIqEFKLP" content="cjjTpMFAeSnTlpOdNqulmuBlkCVqSBhAEVPTUgpILDtKVwROaNbiRnHLtrBndxlAMyOMFSPP"/>
+    <concerns name="NKCAlerJDVZwrNYEG" content="RGbDWPIGXZJsVUaLAIJKyQJnuqhdlWHybywOcRAzTJzW"/>
+    <viewpoints name="sCSwzc" content="JbIjudadaanpcChmnQbdvVMMozZSkLKXQeEdzoFKMoTYoBSvRhPf"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="jTTBLYFGPwggn" content="fbLYBfozzfUvvcWAnVXfajbKfrguVeIapegdzHNJfucDkqNtDGdwKmZ"/>
+    <missions name="QEVjszhv" content="gLtNjHZCFdJoLiybuAgPLUROJTrvLcsDEvfh"/>
+    <missions name="ybYIRwbzagqxaNlm" content="QaglxHIRBJXQuLGnpxtOLkLJgyKvvICJKriy"/>
+    <architecture name="ZgkCdTYpugoohtupYWW" content="MwLmtZYhgOvkCItDfwOholPLMpetYkEAwdoGIEeidcdWvnmpfQleNRRsRLTnQLQxxWVujKVNFmJBujscw"/>
+    <stakeholders name="iFnPpZDXXbGndOY" content="onWpZPXulJfJgzcgyYvYAoeRMJXUlTMbkJjaAfagUHKezTncIwheviFNBTRXIOcl"/>
+    <viewpoints name="kDYNf" content="gdcKrmFQjeaLqLxRKZWnKTeQsrGoCSofpyqrXhsMHfUjCUlckDTECruutDmlfXRyBzXeyidrigPxSysMXwwLMqNxaAtdN"/>
+    <viewpoints name="dugFuXICdJG" content="ODJCFrHCHYIOQkqkXcLAuVZEWdFTXzyPpWxnVObhRAOZehizgVhpDYXWOmyIvbZwXHwYICNuxNjNhHL"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="vyreqKUSDx" content="dSSsxraiKAQDhhTGluHUejCYWuFWfDCzNwQWySetvbytRbVrhlDAXLWJOhzTDjliWLbcHifBdYTg"/>
+    <stakeholders name="faXryAwpuSZHxxfm" content="zLOrXkZAamGrSGLZzzgbTkBvAcNfMKHUGtuFflECeavgplKDy"/>
+    <viewpoints name="rsijMjot" content="kxlwnqoqCrOfxjawBPddCQRAKygRxepDXNdBUCPTeRnqtBottYDhABnVBFsYeFYtFVraWWguIqpBDP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <concerns name="tjcmO" content="oNVSKLUQOaSlrKIYGkrCXhKDTDpBLMOQaQqMHNECpbGfQewjCrN"/>
+    <viewpoints name="zLlZaOdW" content="puThMNDmBoAeyXPhdKXlJQlUYHbYOaNrgeWSYeR"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="LgIhfvwZzAYqr" content="pgJGprTNLBtiSixAGadwrtGtlHYpkLNrbMCuifccywetiapzLbQUKTOozRTYMbuVvzuvCAfsGOBapCXTrjRQXdPS"/>
+    <missions name="PAzyaRFRpnTZJKfqT" content="QvaFTFPCknqNAavhvbMDMiQEuEkbZ"/>
+    <architecture name="ivnJZuLsABIWVSzG" content="VyCZGwmMUOjeYoAhvxXpsgQTriRMzCVhPivKcyRKSQaXaVrNMlmQYgMNyNYXoYoQZfvppnv"/>
+    <stakeholders name="QziUbkJPYhtP" content="IsPqoaiDqYWbvHkkKmYEEETzBEfpcCdaSYxseYgSJChIVPPivqSBiMGGXYnpbXXEiIRehbhWqHaNRttWREUhqDsQzhrsHe"/>
+    <stakeholders name="rKVbGVFkWnPEPXgD" content="cSxamQtqqrpQkByjmjhExIzLuiRFFXFLBLflrsVizbdTUKxDCgIFfRgAIcXCGdhScdFAXvYePuYcXQd"/>
+    <concerns name="BIjPY" content="KFOCHGeCzbJvmsvGopjsBHxBmqKcbybmXvOJapIbhCNjubUZGYnBXPKunkFyuGGkhTdOCBBYRckRyetE"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="hSvVQAksXJ" content="sprFKhPwsEclzmYcEmMHsTpOSydqFBA"/>
+    <missions name="rSigRf" content="ADrQVMYnGLpLOdfNTOKxwgscdgULWZhuUGOiRsWXCTPYOKNcOSsaVKmtoPHk"/>
+    <missions name="OOMEbtC" content="YFjaFSPRjTxpquLVZgMtdhHFtvTZMjGHouULKkeoeBSRFjI"/>
+    <missions name="ONbOJAPWgT" content="qdxrtZGrZeQSCZYOTbHkXPoErppKVcFcBqqDXXbkDaaFHYKFsiLnEmhCkNWljX"/>
+    <stakeholders name="RDNvsCEOCTzKIDEEVam" content="FerQwERlzWClTmbTqhpuphsMzTtPeVdmaLMjsyxhMiBQWfdunTESUaukCHm"/>
+    <concerns name="wsJPdFTChtCXB" content="MhpwVdmTmuRaAaNDEVFHlmxePFfTbQPAgKnOUZuhbk"/>
+    <viewpoints name="yvhLHyKdcvdit" content="wWoHQagGxnbJRIIsIxWHucFfKuYVjuSGnhyzJpqlY"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ECCQci" content="GVcFFnKbrIwWKOOoJmDIxvDcQPULlFFdbVxQstBYqQXMDobtFDtjsldKNgJlgUaZYJlAIPtyDEQziwMxlLVdFXhhlyNWGxSXp"/>
+    <missions name="wbtPd" content="AfKRLSoeRQOlYUwlxPzSoWBqRUEHtBDEXpeJHanZiHgxNTfxhsvXZWivGYRWzUjA"/>
+    <architecture name="OtQxRqTKvhmZxbctJ" content="nuIRlHMpIzYaaSnxQYFKPswjWFmELLswDnaVbJtrvWvgjoAncetF"/>
+    <stakeholders name="IULYRZoyM" content="jJALCVlDRoYGuizNolifqFfLEZBHz"/>
+    <stakeholders name="vNeptawUJsMuiMWYAg" content="PuGaBqWAJTntecpihKkiGvXJmpGkDIjCZtDOSUYmJgGNakTWQuwpBs"/>
+    <concerns name="seoZQiueJwkLET" content="OCVWBPTwiwixwVgIDkdZJGCQLqkvI"/>
+    <viewpoints name="UCFcGaoGxGaOUU" content="GIqvvMngkMLThYiWsdZLEYsUFquBBeHPqURDIKuGpxXHzVwVaQ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="oTTXtN" content="gqOYvSACqHevYWWtudMCsPcnpFVXgKitSryEArkXMBeZvNnuHyaknnEfZnNDbhpQoYKEObkHsyhaFwvQwnBaBUkObTOiYHWo"/>
+    <architecture name="fnglmQ" content="WWZmIQdNbvGGkrMCrcgbtpE"/>
+    <stakeholders name="bUjnLuZPJRRxlAWL" content="KIZJbAjGmcFymkaQelHPCiVqfWohIkSRGliYjvnhDHnIKpbhgkhPAMgZcxiEwCjSefVWAyUXavwTkYrcOoHErbuwOVKrG"/>
+    <stakeholders name="CDrGZcuHvK" content="clDwQVLPyqmXRzUqVJOrFgIWgegXsaBBhbKRpEeKjkbgrEbrJCGbQaMIvYPsRNSWNaRnTrdCfiwY"/>
+    <viewpoints name="jsKpPjFeOGw" content="nQMvJOjHCieJbEzLzRbmdMvQzJCsyhJrjPYTwYDfKRePAYQmZfpycKJBLKGh"/>
+    <viewpoints name="snZPgggJRDKjXfkHk" content="sYUFIMiWxbfPZnQRkyPDdFqfwNfbjDaQnEquFgjlEiytZXUJQkHDfTKGV"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="yuSTr" content="WIZBFBRmBuvGyJItlJbCKCDwBNIYFQrsBVTROumGYwAuePkxZCXAYLKLBiSbuAIOmpZgigOHjstZozRBPjPJrqavfcCTbaU"/>
+    <missions name="ONidGt" content="DttpqatYmoWUIErHTIVWGFmEBEXkmrTxhkuPKzoFSsLLjqDCETcrXqdwRaDeJstc"/>
+    <architecture name="grMmdeLIhXldQeADPh" content="cZSszTCJFhyCmyrTEBEqsYiEbDsGHJGvfMFfzOUfjQxJhkmMMkNbhHembOBPhgSiwqzINxBwSRILOLCAcQn"/>
+    <stakeholders name="VtlcAomxbqvOaXNCqnW" content="OnTLAKJFsuYeQzYdkWJBNBPzTwRQpGPdmNiphaDxAfvjSzmDxruAiuFsZLjbrdfHaJEEJzFfveOWNHoVZzaYJk"/>
+    <stakeholders name="oVStCTLsL" content="reFEzNLjqbocPFLEyXGlbRiAlLrPXtEzdnaoLIYrbMjtVeVJqQjQMTf"/>
+    <concerns name="wOrRwuJIyUv" content="FTvpLQupstBkLtDaaYvjkBubhJJwNwdqBjlqgunGqfASpiqOQzoHQHtIPcksQEcqKkKv"/>
+    <viewpoints name="HguFEqtFtfIFpCaU" content="SelWyzxnMLcIusOYZkwRecxJAZxAHXwpnzkyktMNrAwFIecMjZPLvjsixyvOLoOHgvLXNRhvVCEWlxYpkhrqwdcE"/>
+    <viewpoints name="BwDGXoGTwYRTTWyA" content="xhWeaVrWFXmkHzuMMmysChdjbczaykLtYugpUzUmDMaJoLDNDcanOrwrjdUwiK"/>
+    <viewpoints name="fwBisMFFCQZALPty" content="PpKBEbSrEmYhzfsDZtvEyJAXMuVMNo"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="CbKBPxkhgcWinby" content="JeRjFMysvbelQTFjPDzjfrKeOAEatJIAnU"/>
+    <missions name="LxvMyxlx" content="SseVOBlvXCuPqYRcNWbooJZtWGgBXBrAObxNKuLXXXlXaBIcJ"/>
+    <concerns name="VgEAXSmDngTGgMfIm" content="YEFKUjtzBmbayTAncrpEmKUfvOc"/>
+    <viewpoints name="ABkIUBbtlvIPfzJB" content="QoUNDooalqMNluparZsrBYezuWjWJJlpOPRFUAhuaMUpJumf"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ZRoOJSErkQPlGsjpgD" content="JJFvXNrtDeMAizYYzMShUDzKWazqvKGvKRdkhiEURT"/>
+    <architecture name="QjbVSB" content="wDfklzHbwZNydEiDCIeyvSRPdicZfkEFmkQXXIfdxheoxzPKbmeZtncEkUNLvxxHiQsXIic"/>
+    <concerns name="ibrJTfrBNiKsS" content="prRYfCTmbeROJqIzqXsMiibJKeQgRzjVTjclbymNpgUOejAzpVquOgKjUUw"/>
+    <concerns name="dnnZCuKSVXFx" content="lQvjEfkXIelmPjiWQoHjIHTZ"/>
+    <viewpoints name="FXwldGaAw" content="DqZYwtQsdeGbDlPgFxCbGHcjsKBpxwZTkLiHEtaRGgTXZqIruxwtSPGqkNClBHRiJmHhuVhecGCqAqWyJaeUBPvLULlM"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="wtdtdOwThKjqdqsfwz" content="CrBponpMbzgBtEjDIkAzjCZjSpunZTBgRcvNlADNYJHRjtVqGAUODYuhxBBZVFmSwGhhidl"/>
+    <architecture name="qyCOrNiIGNUE" content="AVSVixBCROVkiCtalntvkGcynCjalVPZSibOpLzqYVlOawFiRbWiPDYrYulSuMOyvHZWArjWVMyinDzQLOeNeRaPAbbtzogjV"/>
+    <stakeholders name="abNHVyoKRPweqSWUT" content="gdwUUJQSROgcOafARPNPeTPWUBOjSTHDgFeN"/>
+    <stakeholders name="zWrFOhvyHkYxKYv" content="ZjWIovRdlTRXSmHRFJPkbLQrRpdDFzllixzKZoVIlNKqeeEg"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="icfluopPyXNZ" content="jREagPGjIKyHDTrRsTfkoxrXC"/>
+    <missions name="wilFSADOqISRL" content="QcTHClIkuZadWlLJxRxNrGXYjopZHnzWdWKWfNGbxNJqtdTLOPZBYlJHqAstGFaORHAzpZNKGZlGxANGD"/>
+    <architecture name="JWDCBNdhH" content="tdwQFzhoAltZiYKvcgkwYEWLEu"/>
+    <concerns name="zNNUaoMZwrJeI" content="blvhcaJwbacNYcskQJsDBiBAE"/>
+    <viewpoints name="JfXOtJpMvofpYHRz" content="YDpftEYoLwJPaHTrZfMmfLKkoFeMooMMMFkzzCjoD"/>
+    <viewpoints name="vzsgZczcEEtvQKZlah" content="AVnwQSDDAthIPbiSEJWwFrKeBbXLfcJkUpshEgksNbaCpuqutIHPPWsovnULuohEMOBGRU"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ZxkoYhAZ" content="CyunjJyjcujdvfFufMiURplQxwZKBVeECOsTm"/>
+    <missions name="nxJkP" content="ciHgxqOWjpfxENucegSubRCWioYlmSAYnldgpgKNDfMHxfqsunYTEkIDPNZfMfjQDmhGwlKANjNrKMbAQDPtxLQREYyHcHI"/>
+    <architecture name="wXwhcxmbmzFhLKxOkOW" content="SRakcWvtzOWrXIjejKrdzR"/>
+    <stakeholders name="CNeDzOxCWgjAidbVojI" content="BkwyQOPULsMjwJOitJrwSDcfhpBiBaBQnSsigofmjXoW"/>
+    <stakeholders name="WiJmsWOSJLhDNe" content="OfjWZeultDCxpjHBWvVIttASqHnSqetuKarJTPECaLqCGccJinklJMCbqV"/>
+    <concerns name="xtIIjrfnNzdnKIhu" content="XEaeqcMQKFWHFnRIxfLyKxMFKuAunorttQZzytb"/>
+    <viewpoints name="gnLlvbzqOyxcqs" content="cyPOABHHzPGNDeEwSEtrZWGebDaVjpzpLUCdrFsyVChmAtkzuNJBSquUuxPzqMAEPSjoWWJKcquw"/>
+    <viewpoints name="LVABUGyVtsWILLmgJyK" content="gIyIiWAUfGBJufNrlBxkLbkXJVwvEQwOBqBCsXssYZSqJLKAzmVT"/>
+    <viewpoints name="JcPABHXbmStathTPn" content="bihXwsGLJMexAYnkvXyXhZ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="yGKINTRSdtNzlWTl" content="hFVflforhudcUdBmCGHTKEidAHzLXBSppOWZiGyDBPAEPHfguhCkJoszVKOsONFzMWCGmTxmmVadYLWksqmiBBDkO"/>
+    <stakeholders name="OfOKn" content="levKrJnsQeUIkiVNyqncSCPaALXVAHJfteHpywYXGOUrpBzqKmsMlFpYichwIdeULIZoQIHtkAHT"/>
+    <concerns name="vZjUJSSehsaoOkZAGc" content="aOsePKrgIiSgisFJfUtFYnSZeT"/>
+    <concerns name="tKVwq" content="PdMmGhqerUmkvzNKCvklWvxTHTqVYqvOuWIGvAjGaxhOwcaLy"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="XOwcALCVoRpkfFsegw" content="AMfupijBmBonYCrowIJOuYSwCsPVUQFfKKdTpQH"/>
+    <missions name="ZSndqKwxDEgoIst" content="LdHOlyAKWIaTqzbidrmaUEULGUayAVIhahShoeSFfMmxsnxCuzvXfEuWwlpdCjAMFKIfbsv"/>
+    <stakeholders name="NkRqWfMfB" content="RzHfZOXOtKqXUKWGBCMeudKRnqtpLOQMkFDSazKLUfotbHoepHcGafojUP"/>
+    <concerns name="IlpAsfcK" content="dRnfeDZXgIDjOyKMVishCDMUZKfobiwQzmCqjNZektJhCHELRLkOOySealqmlARdhgXNgNkCZodoWZ"/>
+    <concerns name="tBhdawtkbZwTUJVTTj" content="ldwXzxoshAjFpIIBDNhrwGBNQbOVnaywjdBXdCserpK"/>
+    <viewpoints name="MoGyQHXwVJmxXrHaxSR" content="feOkdnaHKdvADDEPTqYxmeAbfKReTlekVRerTphrQjmkfwdxsPFlxtQDeqvrJAExugezQItKb"/>
+    <viewpoints name="UFSwSRCTt" content="cWKyyUBXeCSsIrqLFUFTnRBiAJbFTZpZWCbiNkivQHaYESnuyLXaZEEMzwqftIgWakDOAMZzVQPvJHFcMMLiqWyafjP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="NvnMyQpMgVD" content="LDsPDsfnZvLmjUmbuzSQmbrGmzqAX"/>
+    <missions name="nkFpoRI" content="vsEJhKOyMfxwObDoHMSLSDbNoGlyUZRMMENdhdfePIOUHyxfJSRUYPQgWWPdfMszYHPpMtFgUUCSwhRAaaCQsDuaXlmMjxmagTz"/>
+    <missions name="omltrJVGhnnBrRvcc" content="mewTCdutzUFmdDGHmuamlldnOQkRrqDwqFtSaCnTlXkYPewaKPzCiR"/>
+    <missions name="McUbuj" content="SlZyFeEndQKtxYWvtRWMYMHyOyftD"/>
+    <architecture name="zSdYgbIEYh" content="iZTMKLvEhJqNsPACDUlFCNXTwrCzjOvQMfFMvhoTmvhtaBmAwDnwjNF"/>
+    <stakeholders name="EBwIZQ" content="kUzPjRedQbLlTSSwWgNQUNAKCLNeBYXDZmlGNzxrRE"/>
+    <concerns name="vZYxfFhPKBhz" content="SfwXRMLTzCBTOglLmUdyZry"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="CphSU" content="LBLqyrVWDOKkOropLYZyfECTZeAaBgPOStAPUpWoWTNcsykKmOBkqcmfZXqf"/>
+    <missions name="wtnHk" content="GiVpYHncBsJcBAgcGDmKVpXwKPdmQPQLscwvRmFCpeHyLZPMhsqimmJMJzrtpcKMBgBUnmFuqDxQLfYdtwlzN"/>
+    <missions name="rAHEpyHMANdV" content="pVHFFrnZbNPncaOvwVpEWUUEQcXgEXrgEdclMFRoKEYowAzyYVOLkpSDJcCzqOXnAfyyOyWbLjzpCeVQpYsvgaPLwlydmuMiPG"/>
+    <architecture name="sCvecMhGUuhPgVysfKP" content="QqpHdcGEutVyMESXIGhNPGaERwZAaFQlOwnBWqtvCBVyEpllGcoOaVYTjPOmzzzAXEmrgbPQAXCPldk"/>
+    <stakeholders name="FwfPbOtGpHp" content="kGIXJAtCFNzLYRmhExHFzjNYCqbzaMMTheqVzDrewB"/>
+    <stakeholders name="yHDTbCmJ" content="WHXiwKKeCFksgtWCXZZZabizdOlISNMQzeQavsJsAqyLvkAcToGFSpUtOLMEPPHKGKxpcAOtbUvyz"/>
+    <stakeholders name="yjAcdolAJfbhXTcyQ" content="GdMWnNxrAoBjzWFnvItcDWHZYERoInbycVyeGtaZjAuUMC"/>
+    <concerns name="okHguakri" content="UMRTVRZqwuDLFKtLPqFmpcDMTferq"/>
+    <viewpoints name="tiZoQNTLRft" content="gZyanCAScQCUSwRdGiEstubiCSBYaiHxPGwRuMnzJGYYuuKBXfQKsIC"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="zECmAKmc" content="aMWMltMTJZfQmlMzAYdfQPNHxSShF"/>
+    <architecture name="WPqMyZHgdw" content="JSnaNzgwfdHiNSMTSvUHqbXDFAUAfPzQUSlXMzpFyffPeVBprpYbCdBQEOZTFOoyUyyngxsbwsZUjUpgfGTEMVfMSXobsr"/>
+    <stakeholders name="CEvbAJDgtdTXk" content="zpuCeFDoYTPIBHUaNzfFribUadYwfwjLTiubbSHbnOiAHoIrVsf"/>
+    <concerns name="oneRRpsDwHPczE" content="kUlYrxtpbybLGrItcxUUGrigHLdRTkYHWILvzAmwuCosIFX"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="voXyHD" content="ZoErtJPRjGqzbNNbNENiufVAOiNABovcuYlBWSFViwhDjZARTtDzfYYziLgylptDYGOsWxIFWRLeyErsktWKBdKUCSObN"/>
+    <stakeholders name="eJEzgFDsF" content="TDfkBcbLbOOxIVxUikYexLVluYv"/>
+    <concerns name="DbCEgc" content="ZdATGYhjJEwLAfSRHYWCPLKIXsIRUyZETyWiVhGUQCCNvlyaMQTjEdfvUNqUzexuZVD"/>
+    <viewpoints name="OeMehnaZeXSFfW" content="bHVdIdmYlbFXnEsapmLumTyVB"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="hqugbzO" content="nwYwbMJGRTWDdwzVeLxAVbpTcPyzKdvZVDHKDieAfeChBjvUlicuVTYjFCnLFjVDzgioCLYIwIqooSLJgYOy"/>
+    <missions name="GBZDGILzkVslXXAAxw" content="cYUOVeRQueysXlpVETgEEEHJCkOKbfuaWEgppHhAeNCl"/>
+    <stakeholders name="BlBvVLOgvyEpZbgx" content="gmoLAbtGabTuEYRFTDxwpmIhkcmHwnAgZbQLHyvJHARPVLqrRCdvDB"/>
+    <stakeholders name="MFWpoCQiwGFkRSCFA" content="JhoRNzHVxknSJtlELUzRzHcDGfuQDMotHQZoIPeBdEPqZRIAxwKrGWNlxUxL"/>
+    <concerns name="XpnwLZ" content="wCFoBxCPVoHaFeWCbRAFMwJjKcdZl"/>
+    <concerns name="aTsjsn" content="XcHPowATvvXdpxyxOnLjeToopBOFiKLyFnhurSsEqxZbtCgVUUlzRskc"/>
+    <concerns name="WuxsvqETkiiKIB" content="OrigCSOzIneiveTOUrgKWJnSQpfEPcHYug"/>
+    <concerns name="xomOXaaRUGVFjMs" content="vNvtOFqElGYdeJMRCwbqZBeQeColVPPoOmbKfALHQwjWqVFQWvkNmWOmgvuoFqLZjhubALDLpENWfivLh"/>
+    <viewpoints name="DoLNwCTmkIaw" content="qskjBIeijZhXDypsPoVXvdbRbXlipXQetsyYSFqFnQPwf"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="rluxyNkYOpAgcRIKv" content="IWwAOKEDsChaorwqkAnoOQTcSwijkEHEZhyVvJnRKmaHpZReFmBxmXbDgZsfWfvw"/>
+    <missions name="ZIIhjfoUqwZeAhn" content="QgZoIyMOuUqWWtDVhsJTAwBoZFRMusxEGXdsSIYwCckiWCwDZWZWUPACADeqiDqHIEwoxHp"/>
+    <stakeholders name="ubYlpiQgTmOTeJgRGq" content="nmgrxyXqhDWQQlOlhJtmZfpkeIaTwXZSbvrAHtMXgXdShdHePXBTEjp"/>
+    <stakeholders name="JtxnWPrrUDuBCTzy" content="yEHjxbOaepOniSwCZgyBgfQNmeQXnOcfMXizBkXxmiWohABNaePuJocunOttIsgYcubrQWiMaJzOEZCWUhDiwviprJfevNPpz"/>
+    <concerns name="hrrghKpA" content="ZHuFNGeVnoJNWncYeYtEddPCqMJcbprICdkxQmgceiJmTEyQBOjwnhsXnicjmrtOcgUXfRFHIFqdjPoTiCgaD"/>
+    <viewpoints name="PrMgRKa" content="AnteHozKlAtWnkGFIMJzoTIxceuYKoTUejnLpvUszvDTDegjKilaNORBVuTbAPgoKBFNdcLercltrIWALUihlP"/>
+    <viewpoints name="YzsaznRBSPo" content="DQcVHoVueGacEJjChZFTaTjNGUswyNaHmtG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="GwAZoq" content="PGxxkWIgPPlhWNrjVyxhJYVdHlemeNsXWQOORiNRVcAYvSaygjLmBcXZCZJwTljHKFBHoPQDsLemt"/>
+    <architecture name="QChkTs" content="TaLGstHeOfomrUaVMzEhhVILNHkycomHzCmQqMrDYKdsGHUjLIeMWpulQuSoktWsKYdazJfv"/>
+    <stakeholders name="NIiwhGmWIvE" content="sWsorYGQHVewFQxPfKRhHNonZesvgiqWONoWeIoHDvlvGHZVLmvWfnQZpSwWLOzK"/>
+    <stakeholders name="KZSKIZtKTabxSYA" content="YaAZGZLXAnPoLNXXVdwxKLCpzzAGDFXjnerYCqaSaeczeIODUCLnVLXGUBRhADmBaUXwzQSkdRtbkPhnnrXCXSIwpcuDQN"/>
+    <concerns name="LaYozgEPlZqyTTYz" content="GErakGLPIMZjKLBMeFMtPUiqwIi"/>
+    <concerns name="oKXnfKU" content="hOeFnytmeyPHFEgmRIgYSAmDWblrxcuSSQnlGcAshqovcISrwmWWeCnbUixnAwTnneVfgMRJEsHmGFckRmLXqeDiyfusEDJbHl"/>
+    <viewpoints name="PfISrZEEEQqhtkkqOAR" content="dHWqAhncBYunjNTjrlLXuUUAuDKVytMDGKqRixkFnTMJLsHlpWqaDCNnfncfxsqHURPCnkYkBBUxvWoGI"/>
+    <viewpoints name="HdsIqRKLYZSMcZ" content="lkuvyQimFtmhQVdzKeXnvdjUpsLqnIcsfbGFYAqbimeBaKSTv"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="JdnUB" content="khnUcfFfENQvMlOpFxqnbwTgDDfBFzXlHZeflfCjOYgXRxAuHhNgdMOoPiKsebKD"/>
+    <stakeholders name="zvYCm" content="vEuYoQxURVdwuHrHCknLCWjwaIqdItVBvZfyopASRjSOOsRTztgnFmnwuPVMs"/>
+    <concerns name="hWNOFFZCzxurC" content="wxcqFaTxbuzRowYCDanmNZOynIfDJrTCLTUbISMZtEvdHtcmvoEjnDZQMgZbkvaSwnRbWwTexwRhdC"/>
+    <viewpoints name="qhqCjqYiIMggllO" content="CuzlmeftiMDGSBmiUXMqetmwMhnqoYSCJzkeiopLgrfgvEnGsoWqPY"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <architecture name="CWKKoCecdIbr" content="kFaQzIzXmdXydoIyRVeaOvYfqRxUmOrsBzDioVkjXnJkJTNwnvUfiZrbdPaRwVIMgcPOqFJGGrdJEaH"/>
+    <stakeholders name="BVQkddsBpupcBw" content="sFqFKtvGeRYkwienrALjGunBqpDPFxSKHGsyhwuBNqrSRJYofqpxrBIqbQnGYNkdMHYFoLaEFfxSuaIbcqpGpWgmLdYGEFEYiVm"/>
+    <stakeholders name="MtEpkelo" content="ccTxqLVveDrptcnmShRJ"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="bHDYcuwiPiy" content="eULVpOcsQJSOhGyDQYTCkRvZMryFBmSzDaRrYtAoNFEuKQEOOXnKytUFEkDUpiEfxyEVxPnJqAFZQRJGcSYGZdbzZygZWNr"/>
+    <missions name="IKPcQBJEywSuhg" content="TdmbbYihWLikAcUCWLJNuIZJgeBvzxxShzYooU"/>
+    <architecture name="lwWulBPZW" content="OFuWsKQGkmLZFsTyqiZaHZrHiybhSIfNKramsPgbPnMfLMAqcRNFRTUKAtXhXbHMom"/>
+    <viewpoints name="kgMeqROjRO" content="HoUcjFXnCoBgEcRRwowsobXGpVMAOIUGaofMfCsBGPRWrbVCFrHazkfKoBSFCQXcbjzauLs"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="EDQyoUQMmDQgKR" content="awpwxgOjopERqZdazywfOgKMlXaxOINsfAHmDvVufdkCDxecxrfraimttTbkRpPTsuqOcppCyEuJpyqEsHNumdU"/>
+    <missions name="jKNKdpKWX" content="gZKMnQPXmqdpBzBLmqHxBpMrrdKtcRXqfclBA"/>
+    <missions name="FDFYoKirIgvTvWRmrtL" content="CakwHsRBecwsQMIhVeRYyP"/>
+    <architecture name="ZEOLFjnDvQYjbrWvu" content="xpxyMIjkhlsZicRomURhdEmGvPozAIiwBhooAsluoqSotZbZFwjtQZ"/>
+    <viewpoints name="aSfFeIoMn" content="MGymaBzJSuhbNRgJhuVLcfgu"/>
+    <viewpoints name="MSeyMXsstBDZoaNKPNY" content="BsLkPQWEDzCFmPnxMLMYEMoKhMVCGHVoFkfjYQiICXiioYlRIjTikAjfUrrSmGBLxhjuekkQIaPm"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <stakeholders name="EaENXBuQotuPRP" content="ckAjvCWAgXoxATGiaQswvNGoQWxQcDDTOiqfPlZyHFn"/>
+    <concerns name="pbQhixPeMshmmIVgaM" content="SEvvHBEhmWliqZfkhutuqYINqxvyeIkcaXTbcAycYei"/>
+    <viewpoints name="aJOApJkQ" content="GcTWYsqaYlLebfUCPbNZzeUMnxHchBtWExkYapmwnagCZowpqFIQKMVeDJvSTjkDZGnVfAUFPNqqWTcdliVGRPbjo"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="iXdGtpkBXEyRPoqJV" content="OqRKPRVNRYNlYHqKMUJdozoaiaOoJAOaAlXyGamNVOLLURhcsFBeadLRzECBKpyRQurkNmFDtczbwHALCCGcygryEBxZjqB"/>
+    <missions name="QGVPN" content="MqHtTLJrJnGKKHJcFYsVmhAUUftfOqPlwNCUCdBgVABuLE"/>
+    <missions name="lWEFzoAQWalM" content="cqjkHtQmNfRJivcDomwTxGMPJNpfmycKimyEmnIuiEoXPhHBNqYfbspsEgWA"/>
+    <architecture name="rnocBoxHX" content="TIqazaUvHNeYRhNamOVQPzmEluUoNNCKZDVwFCaZEqYSUKio"/>
+    <stakeholders name="FOSSkBOZhyg" content="JECuZagiXvbZPjPqLLPKAqqddMdYorVhEWhpRHbbse"/>
+    <stakeholders name="KopxNusXJCwfnj" content="hAqmpqQZeeBfguGEGDEmJqaJnoPWseiqCosdYgnuQFpgRGkYlbzrBwBIvFrkiCmjje"/>
+    <concerns name="ZmvlAun" content="xSfswWZJgEBRFaAifdRmJFFAgOjmCPqcTakHRmSMporwC"/>
+    <viewpoints name="KxQobV" content="ZhzawXhsoAeQSXrBCliCodjjLZtrqEvkCHXrPprcaGxrbrqvZseHtykyxgCxKxnhOMaLEharErtrjVCPqNT"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="rHzEEVLAHlLFeqw" content="nznhplidGiQYYqSZfsyHoeZqSYrpdHPvdyMEgPSqLJd"/>
+    <missions name="kNiwMDmHdCc" content="miVSZkGCGIvOAqcUehWIEDEeUrukrxNgNQahPJZhSwvkMtWKVhzrozgnGIOUAomrYyyE"/>
+    <missions name="YHyVHkBplX" content="nyecgKXbezZctGGeiEsYPvSGuEIKmHtT"/>
+    <architecture name="sRUghONKYfKahtBUwbJ" content="MglsdJUGnQrQTefNSoHVjXGoLDNJGqNMhOzWmeMQQPBTBIkUYMvBdeebhYzuxVsXpUFSpuiILYyDHAvmHRQDzQJvAuSIRnf"/>
+    <stakeholders name="CMyzndIuj" content="FywMHJQLBAANMjBznyKKnMLDussAwhZtqoqOkBJQmx"/>
+    <stakeholders name="uLzGt" content="ZOLyrUelmRwoVaoFzbCDHryVNRoVjiSgUqUgkmsUkkYYwmNDGoaZcFDAXaWpIorqYdaqxnrQDAzyxTDWDxsVySbo"/>
+    <concerns name="lEAZJjdtl" content="QVOoBPttQyrdjslwqmGTEwEP"/>
+    <viewpoints name="EEvInlfsvB" content="RYTGoSjrcyjQZdQfNQwEXrKshPaojgjkUjOUuxKSPQyQkGGhhpxosmagSbJEiGrStpNqxVnTLfawpDJjYasxIDdhrR"/>
+    <viewpoints name="qmAYN" content="etxDhoPOGrkCHUSBkGHpBjUI"/>
+    <viewpoints name="khzbPjTdfzHPO" content="nDRJUMijbpqTOPIPTAAjYZbgyjFAMkVdejomBoyoEcMdwEfqYgzB"/>
+    <viewpoints name="FfbuaFNno" content="QKjswZdCrestKGEOdTFVqmFsrQSsEaKwnMfvpVoJFIsCkhupCOKmzprciyTUrVsfi"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="uvCvWfCDIwJpAsIrN" content="TrZNGzbLhFqlMzeCNCFOXuAFGSDbumbQPQnFTTuhJKiZqwgmwhbXCkoPzokshtXUbbLSpqKinyZJesuKrNmXlSgOXv"/>
+    <missions name="tNMqjUWQpqT" content="nrohHtuFoDNhFiFlsRDeEYYrGLTmDUvBxEyngGiErREXLaioUdpTKRkAbyjpLySTHJiQaagWVrQnjEvifqyrxcBD"/>
+    <architecture name="gTMPwKGSnlgoCGLoVQv" content="RWsmHYfZiFQHURTJtrRYcQvwc"/>
+    <concerns name="EcGmdZ" content="pmousVPoJMWhEBzpNXzkxATtQGwZSVnwEZAfgxNsruOLGNfiKJZIOYsIuasYrXHe"/>
+    <concerns name="ypBjQzUzRlMPB" content="viVdieJCCpNrZmUFmLBWMQbAMNXOxDDZzMEfrpRTmdbsmCuvOVPeoRlidmzBrwpPLibrxyXZd"/>
+    <concerns name="bOMYWXkwQ" content="JZNNfOiLFRRmIhFIljeCIdYcsdIdismGCaNAfnOEiQn"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="UxjXxBZsGTPxz" content="FAuYMfdrhWFUqaZRufRKwvBGkqgGDkz"/>
+    <stakeholders name="barlpWvblBxUzTIBbi" content="xUiBkXEITvyQzbXJfBdxcHCjpuUpAIAMaWaHFfqhaANQmxmuieMABOlreORYRHgIFuHpgaXzJYgkDouVIBlBj"/>
+    <viewpoints name="vBhrSfiv" content="bWJIIVHeZDvbrAhrhjCdmIMzJAoYADVzteTCigSzXzwFxaLtqlAzyR"/>
+    <viewpoints name="uZGQu" content="ozKaYZviUDOQWkUiRrCIVYrNKcHMZDzNGKpqGAxGmRlQQpuublPUlRLFFrXvL"/>
+    <viewpoints name="LhoaJaWsg" content="znnIHkyEiJRxTIxaQrjwiIlgiRMRJeiCgeJSgGnPbcQkyLeUxYCRPrxaKMHWHbZWGuvrR"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="PFSqpKzmGVsMMt" content="hCRqtqpGCLYQdEnwvuuIaxObWcIkUJjEgDLYQhBQaRCOmNeYDCCVxxXcJhysareVJTsJEA"/>
+    <missions name="OYKIuaPLDHfP" content="stQFuEMdSehzObIFDZERXdRHEraSXuVsVHcgzkPnZjLDEeuNH"/>
+    <stakeholders name="IbOVLIBbRyHvw" content="WZPBoLTjRoXrliWglCrlOgtRKASGkjSRedNkNHpIZ"/>
+    <stakeholders name="nJpkGSZUZGimKiq" content="TJNvkUiCVqlyNFsWLizfGfjIfpVZAteQVGEhTffwNODgWcXlFCtxfmXltnzcvcrWQEBJkidBIITlBOZYAWWDvfNQJU"/>
+    <stakeholders name="ZricDaxksjkDsufbKiw" content="hrGtngjUJbklTnnbfTMzbTZelDpwEInAagMishz"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="WjSUc" content="VvhjyVmxjNQjqdrRQTamDTU"/>
+    <missions name="hMUBniooZpSiP" content="kPjdmvNEIGjRvJmTfsmhvLZuHgPddkYVdQuMHw"/>
+    <architecture name="ZRKaMjtdRLOyfYxpa" content="ciEahkAMHcisWWZFzHSKKYAcYQOYDEpQVICAjHUBWalhtvDaHRx"/>
+    <viewpoints name="bzFnSKnrEBPAr" content="BomSHvRpLdvEuYgivCkmgymqffiamuP"/>
+    <viewpoints name="xhBCYMLF" content="vnJPunqfAEOcUKrZmANWKCWAgyPbFuBu"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="PYZHReshFgn" content="lbGoSXbGudqOGpolQOLnzZxhFFwInCSVL"/>
+    <missions name="mpcWQHr" content="aejztOWwMoRTSqTgzkvjeKHGByhahKOWFhelLXtbHFQgoLm"/>
+    <architecture name="YWhcI" content="nxpaRrBgGaTUkpNKIUTzneCAqBjtRxAgaedCQMTNdGftEkGDUYpZXWksFTTthKWQQYNOJQrYwzgre"/>
+    <stakeholders name="cfuzSWmsmZBQ" content="GZEXYKMnQROouheqTHKFYiCLBXPWjXmWcYbXYRJFgtOqDHZeCJPg"/>
+    <stakeholders name="MxPisP" content="lVkzwKPovnMkOqJzICcWMWzYDhhXHUSenyIl"/>
+    <concerns name="IhzPRCvmRqXRNDWxcL" content="WwzePYaqfBvMrOigQyZSSWOIUSMFIDKKCbkBIACIoToWVa"/>
+    <viewpoints name="pNsTCJbDGK" content="FVhnWSEmCKyRklrSDLPhXskfCYKqYLKBQvkcGMCORFzjoTZiTwrfvaWDVNmmGeCqQOocPMszxpbhIvyiiKfwKGBsEDHwUYLIYvg"/>
+    <viewpoints name="JDBeSdhamaZniUUxtj" content="CltWgTHqYkLVvCjDurjGrUJYxqesFSVvpSqNxKeOFzNM"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="lOXSf" content="VNZHygYURwTTQqgHwBkkZwxAvWOkXpEPoA"/>
+    <architecture name="XESlkUQSwGdRdypNXT" content="ROYDbFcLtTTEWwGNNwWzAIAOucGNjrZGtgIXAjuXOuCGQFEIKcqBRjfvIFDxivXRWDsCmgFRlZZLColRqgdRWAhxwMmCEfetvCd"/>
+    <stakeholders name="vQLAqVQlROAvInrPC" content="qMbCRHJrcoavEknWGThGVdKrEIi"/>
+    <concerns name="LiJvzBfWn" content="MPqVVuHgstYEFOncCiccVCiFfEyXOeBa"/>
+    <viewpoints name="jiMWLpzab" content="vGDlKvvKyrUshLwaeOpukIhAyayBtdROLmDRGxNlhXaCNOzcG"/>
+    <viewpoints name="HYNIeNVWpalfcrTw" content="OESWAzMBoGoPsWxyktugwPLiqleyVJBnRLMknOAcYxXFSpHheuPkcHTVQzfHkzXoaOAgUwpwfT"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ghVqypPsuYe" content="XDRVUXcuvESIVYlwwPisSZSizDUCgqZPBYmvMPyhodZxKzWvcDxIONyxRCsPYNNioChsGjRcpOSjDUNLTZfRvlR"/>
+    <missions name="eKukdexZ" content="pqmqXHgVtCSRprgEhAPFRYpTpKIAlfWnnwznkgaBvfcKqKbcaWOYOHCQUQSigkgRiqwh"/>
+    <missions name="bNhfxBVq" content="yUJKCSMspUlyKhGGNTTBLGEyCGTtvwWrEoyJOWiKgCiuQypuhZrPWmpgUhsQlfoRjIvgpGpbG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ULVAmgSDmUN" content="VthaGtswzlsEEuHdQbaEscCacRVExUlePkreuPKHAPhSWdbDiDPAUEYhrvRmKeuFThjdaRLzdzHYgPTh"/>
+    <concerns name="wJmYTqQWLyGKVBRiZn" content="bJIiUdbvVudHZFtWWbYaEkXwZirTOskIPnjuvmqSdnHvCBVLZKpCCYiARKwXomoSdCnTIKzxPnTKhd"/>
+    <viewpoints name="deRmpGBDgPNgCiBm" content="mzbYpmkEUrQYQxKxeykHvpAzfRZNTZdHkc"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="VXdIgiiRkeig" content="GpbmLbjPRLVKQkwEvfWpcwIcjhlkhRgILpufCEGTXusSlYgsPfdgdQxsWPxdhjRWKICckHyWwZkkWEBw"/>
+    <stakeholders name="sEWWUdXvwVUMPdbO" content="ROPyNqdnypqbEVpxTSbiaAFNVRGIMANUBbmrJNBxRohLmqjDkuYJijuZNCikjLUsA"/>
+    <stakeholders name="wlqelsC" content="EMzDXABaBgUmDGCDZJMayMMKNwACmzMkzLNKXVseVYXlwHgkXmOHcvwfogbfdQLNEFK"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="pnZGlcspxJu" content="JOPLbUhpJqRVsgqDDfnSdDtLErvHYNdwYjf"/>
+    <missions name="lVRkFkqUVEHk" content="ZmNUOCNoohAIKkrbXkOBUihUszFLwbVodoSiBiTbVwHDUKXPcsBYcdBFLQJPafbLnBXZuAVYuDXyrHDjwhmLZnV"/>
+    <architecture name="NqNfeoXUMpMAkwRUG" content="XLYCXddlbifhsyaEmIBxQpkbwtELfqqBrfcFYITuOfR"/>
+    <concerns name="CNFDFleRgpg" content="cfwNSWKTIKzAnHRwbrXwLvhSomjHdOWZBnWOEiSGtoCpBiLRjKvJiVYUtuqzyqbLTdT"/>
+    <concerns name="CIBYrxghzOSw" content="qsEPeJZzsjYnDwzgcmPUVjOkXphwqIuBJSkYfYTOqlXZZCmiCVdNOJlKNWHCksSWzzrtmSviKgPpwfSzZmvxwaw"/>
+    <viewpoints name="UiTuSF" content="fZpwNoVeatPDiTBdqwqiwCrUHihjhoAKpsGmHZXfdCtmtBJlCetVUMpxlPtBxzovGBGOiHovuimWmWBbnfHcZjkNTPRHu"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="tHUnJH" content="gcWHhqemeBNMAUpecmFBRnTqKgGWpCAIwtAbtyewUNIqgsLS"/>
+    <architecture name="GrNYbhPLpUgwnTCWwRF" content="eTbnFCguBmjxbNzbeYaeZeHIvrdonGsMiGlKttliEwkibTZUNwJYSXHJCzpSw"/>
+    <concerns name="fHOnqxaBUh" content="atqdEjWwnFxFBCfeDDRVBgsWknVGdffdpjddvYDTQVNVDlczrJOvEAQCjmatcThy"/>
+    <viewpoints name="kPBbOEejocBSuzSVs" content="BBIlgKdNfLMpnNDuqByYDHWmRsQVDPzlpvezy"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="xqOTAKMjbnKjhLpaex" content="rDKgFxbyWnoaTKxgwuCMHXzeccBDoLqhkXWkgnSprjMVsRjrDxrBtkvewxtyqjFXIOCbfouYqbhAcLust"/>
+    <missions name="RhiWcS" content="YjDYZXybMZCaIXQAGFghRPvlwVkDQeYbdWKimXafQxEih"/>
+    <stakeholders name="sDAzyrEAZwHN" content="thxMdOaRITQjQMOEAFndcbiyZtCtIcordUtJIxiwwfqhjlXrjXVyPkooEaoVTZKcljYKEGwodFpospQf"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="OXbbsOLENgghBhbi" content="xCLOaoCRjKckQOnkMstZzcovCwVaMJLZhCVqoNXqb"/>
+    <missions name="CimTwVKnbZe" content="GjwclpsgKPyTwWlDIQzxGSPOawpEzsiTziMjieD"/>
+    <stakeholders name="eRaJmJtTLfxQV" content="LIJnezzhyYOCtZCEmoVFuOJxrUK"/>
+    <concerns name="YDFUYolZVFG" content="QcrekijxQFMvoNwKdSCXJsLtHIfCPNZcvmmyiRls"/>
+    <viewpoints name="eCTAEmKlEjmmBDjgEYS" content="RClbQoDEMaBZfvJzkxhHiyKLeBXVDvARgoLAKkxmgiGUiKjPQXsZmDOMdCjeOth"/>
+    <viewpoints name="TnuWedHlzPEFownBm" content="LwOEhycmiTkkAOFZQagAuzPvSCrXADUZMokeZJdngFajjpuVLnYVNgtgIjnRsyKBysEIhBJVdW"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="thWRoRKRRqdOPWVo" content="XfqtwnmLZbJJYxxbCMtEdRFvzrQZArFPMDscODFVIFxvTbFrOCFopYnRazrXKY"/>
+    <stakeholders name="VqUlaw" content="hcuOoVbGVDsQLXGMQTKkAWvsrGdYUL"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ZgbLGNxtjzpTvFl" content="seoVFzyFppXoMUMKrwMOWCjUjyqxBxlrcIOlUsAqz"/>
+    <stakeholders name="BAYnCUxinquXzMTw" content="OfskizugoVItjlqCetaAJZQBUQghyHArKMTvoWZwXOTGFUaitNX"/>
+    <concerns name="ARFHMkHBzvg" content="vbNHoigHQCBiJxDaOdJAIHAfFOzJHNZILTyYDHJcWa"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="ikIdyulbBFqebEUzece" content="NgVuYPyDpZldeJUjLgixIUnxdlwBNRrYGeYbUexaRKjrzSazHmmo"/>
+    <missions name="RYyEKxzbic" content="waMneXXQKJuiKyyeHvLVzkCQWtOomZIQZYxMcpPktIcxlZLAVmVmmW"/>
+    <architecture name="fJjdjyHVDW" content="OEjeQQjglxhwvZICrXcDODUVcmtDJnuDETuQLhDDSXAKYBxIvgckLMUTHkWGZNQwBVfTLGoNuaLYHlyuokJIxoGIoJ"/>
+    <concerns name="npvlEMOrka" content="zHsKslzprTfbMJjrgALjRDGtKeeseCqjnscQEIrzUqkGgajWMrIUTWscElysKUccRvHbESnjpdmxSiS"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="skcZTXvBzoGjG" content="cpiZQLrXqmFbhVWtskixzzpNbkyFzselMTiSUBaho"/>
+    <missions name="wDVYkLFt" content="QdfkXeYJYkzebyzQSDSTajzOkcTivuvPZdxrODRIuzjxcoBGCsufzExHyMWdYOOOjoBcbBGgXHrwkejvyNbPybz"/>
+    <architecture name="pgjqaJ" content="qJQogoUWROvlGaFlmXlrdYHtDlIRAGmUqNmMY"/>
+    <viewpoints name="uXJjCaVqEbnBY" content="KgtKxOpeluUjOApHpmMKCipbOUoTCoADVaQdKMzdcnqMXvEMSWZc"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="vQjIAVs" content="EGtsWWSSAHYLPKNASBaPHRXjZwkbZVKsTVWFAGmqrfLaaSsgNLGEfcXHrMsTFIJxrDDpZYVdlJgJjzsODpPnmrkGxwxDnpGAgwb"/>
+    <architecture name="euiJxTZnFbSAESanLHa" content="ywHVxdnWYTTFxCVqPTUezuZxTjFFBuWfJzwMYKSkBqJTsyJDbYUOOtRCdEv"/>
+    <concerns name="VvyQXWLwkesAYyJqtWn" content="fhuEqDfpZyWBXAbElOicALyAmmUITkpJGjUEWFZagulqtBTxYDWcLvAzoJFNKgILFPeyAeKQiuYnyQMhJn"/>
+    <viewpoints name="WxTGNRgzvPZAkCFjJ" content="BPMKvruLmGqJlLemqBgQMyONfpFMgTGwaL"/>
+    <viewpoints name="ufuuqsLpRAY" content="JGDZGRuSsLCdBooglzoAsjPrHaqcxVhXALghV"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="UDeHtvoA" content="nuBatYODIMrPKVMBVTnothWkHVtATrXjRdzUKhfzKsPwNshWmXsvSlwnfpsUXZdlYnJQmGTzApdHUQaKANPDEwUuu"/>
+    <architecture name="rUGTa" content="mcjaGsiMwemVoQuGGSnWgIqvG"/>
+    <stakeholders name="JwhFFRBdGSMZ" content="xQFZzpQmEiKzIvASlBgAPiLTBmSnZxMmyALCfqqpDgSDQrpTXHDxulVoLvScZwfWoIZJxnqdmNMDDwD"/>
+    <stakeholders name="oBMMbtkkcPgtTZkveqs" content="dUFyNpWrTQBpzXJVdDIyVPAnmCKidGkdxlEbCkThcCEHZszdkhlJIZDFatmscXSveplphmADiWTjyGmUPukVySRRuzEyAbz"/>
+    <concerns name="XBdFgzYgRE" content="yftTzZQFzJnGLVKawzfAlfOtWJVxSfSivhOjsmTJmpyIMxGmWdWcjlieSToSrcYJdGHdMVfS"/>
+    <viewpoints name="urvHHvgA" content="gFFnftUhmbEypTAINNBGMxGIAJYbqwdvSrhKEZqSKuqkUQCLzbkzeWCiiPGO"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="uiQZOksSryLkxdRz" content="ESLlVRqIyxHqVuwUKaNYrviStzuWjemzwLQPoHBXgKIfwzUbCpldfVyOEEqKLpeXENzhxICEdBjKPSlUg"/>
+    <concerns name="IIEyGrkDEvDHavcM" content="qmFLCRZAUVjjXmDOVpRsZiWXrnibIUuGOpAmtmRSSDmFPkjbUzDrdaoDDRDsrzko"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="PegJCeATtYt" content="FpcywrWejPAuHfbmayyESAHLhkjEFHamVQULjcjeUoihmrWorwrpMaUpcKkMzjHWZjS"/>
+    <stakeholders name="ybuXzyAIDZ" content="vUKmPYktCoqxZSsgjEzOQiXwStgq"/>
+    <stakeholders name="NMFoVjEuNZj" content="UqiMkdeFBJfYYngOKbsPKPSmRCJQqFAhaqqluYTpOAcHjc"/>
+    <viewpoints name="maqpNMcQqttidHbSUVm" content="EKCLfoXlSmNAxHFoWanqHiMDRgdrnbOJI"/>
+    <viewpoints name="BrBrBkrLKTBFHy" content="dTpELAmLBYCWKgLtyytsnzoCvwACmybdFFirBcixWaMadHHxmKfYUSangRHSWYsQKAPdd"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="SFaKSrLRo" content="BzzDZaAmafvrrqqcFsRmeCxaikcOaAmrGdbrUdiMgyXOQojfqgaPgbJBzDhSKiU"/>
+    <stakeholders name="FMmCypThhWEnnjWa" content="qvEJxmfXqMkgaXPGaUeeWqrNrfxTDUhlrnWDlhyoqtTGKQXJQTksxbzEiDhjZ"/>
+    <concerns name="QXDbsQ" content="lEqXGrXTFCUVdllOatQmRzzYrwsdAhOMzVaFvnpAKDTqOYHWEhcZCVojFZdbUiz"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="RvRZsloT" content="sDwRJPLQIbPZcMVispGNKZgVHHvBGzUAazJKRhLvdIPTHoivbSxtWXNdsjLeGoGOnfKMXfnJNwXGtNevnOhwrHOXseqOODUL"/>
+    <missions name="KRezqAvyjC" content="vKlclxbTnAbDOBamwnTGzRpuZWFoGEjqtkzzkNLXJxnZDXfSbkMVLLRDEsLkxJOjTNdowAvJTcAdbMrQn"/>
+    <architecture name="kCdeoV" content="npAheAjRoXMpKlCwwnUhOlKItdqCfGtFpAnTGYkCpIHapyfRezLXuksfUeaMliLeB"/>
+    <stakeholders name="hoqfGzTgN" content="yhwPhIozyDvfwDpgPJOSRuciKbdAfaujPMmImHOBjlnpqMSINscaNeP"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="zReOew" content="vgNkXGRzPddlZVFuBMSXbeMdhOJZZVkBHXQkOgUyheohANnLQvjcQQMiUGUCCnBVEQemR"/>
+    <missions name="kjZCDsNbozUe" content="ibMFJNAUWqpGBVQInwYbZKpxozVdmKzCX"/>
+    <architecture name="bqlctBKdfFtDQ" content="fThVimRJcYwAGUTjzYAVosYFHbAOEgpzSYFbVYo"/>
+    <concerns name="szmOzZOhfArjlNwcb" content="wmwYgKYcOUpDvJsbylcKlvhRmyzaeIxjDSAFghQyNfROCUfDRyIPkKpMcuvCtpOfRQeUnXlStDHMaiiYcWuzezQZUyjDrGzQp"/>
+    <concerns name="KubPUWhgtjy" content="IlYMdufEZTeUmKrXsCVMwvIzFVxMvjsxJAcJCcAxAjALwbytLqqirZzRyBavzkfbuEcrcqncLzNayXJehb"/>
+    <viewpoints name="aJhnZ" content="QAbKeepclsmAcCcjIMHMOIHSkYXNirzLjCDNxAetLtAIj"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="rvTyFWSCA" content="CfugcVDkZgWPUjCejOkBTioyWthDJPWUkn"/>
+    <missions name="update" content="update a selected data"/>
+    <missions name="WAiizrAmgOcWdOga" content="ryghtpuXsASTKyRxVXMsXrPNinoR"/>
+    <missions name="vBDNSiaqxfPxr" content="JuQYIwFiJKhvQJKKAUmZbGLFgZNuHtnXZlJmxuQSzxSWszOkIFblantOadGyVoiAqKWprArKjrSDUbSTi"/>
+    <missions name="zfQBJxuW" content="sgIvqjtgYwLBmDXxzdKXxOhbeLPRnFIipOcMFkBuThPNFWphhMEbxKJsSuVPoUDYkZrSKVdiJdoD"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="JybDoyKk" content="DERrIyVNYViQxrPCQnPcm"/>
+    <missions name="VCJkmVw" content="HoHdYlZVQDlkeSSTtVMfJSVduhPRDQCyTivjjPHyIUtONLCkjmi"/>
+    <missions name="ZdygNEqHUAa" content="bLgGznBABlhpggHukfBVqpxZSKppclGXmOyRvJeoqOYwIUeXowwbgiDLdWlVQ"/>
+    <architecture name="XDlTGgdbCtWHypulf" content="orPjjahSJOUczVwmzFwjcugcOpVXpJGxqNduKpukawhfpLwwNIBqxRVXNeFyemuvWMcVNsojaadWXXVECqnIjHXOVYQ"/>
+    <stakeholders name="dJgVADF" content="iiuYYyCpvaDIBGRdsTDWxPEPwXOqlDRcWwTAbG"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="GSlFuwiwUfnn" content="NmPFBZqDytLWMjNHdJdcttHeSXxPRmFYPVyqDevMieAkJKGUatGhrHipGmmXtuZVoLIWkRy"/>
+    <architecture name="zNUvsiiuxguD" content="RrNtOBstQzGxkHDCinWCzpjRjwhUvVgDzNIlJDswvbYKpZAZvHqLXluTH"/>
+    <stakeholders name="LwaHNyuUEbyAL" content="XEcOEhSHfTHJybgggQZnXsEYuGlWTDOIIUVDzudbfuDdzcnfOZjVrOykFYuhhLmthFncsexGDhuEvWPEPUz"/>
+    <concerns name="SHklSqyUpWSjdYBfLx" content="xQwQyRmNGIanJTWOpmMayZXcSPyiviMEgvUSnAZTFfnGuBVPHfmixrHYcebnNNNErTRccFvQDrOsNWgVshANwPLdqypZObCLwuj"/>
+    <concerns name="hRmJKOANa" content="xyIQjAWWeMyljrJItXiVqklyunUjeKmSXDWuYSBGKEsbnBtOLHiqlFnqHihqLQIxzAcyRawFqNLaQEskFE"/>
+    <viewpoints name="fqYFtYEqbUedgYuE" content="zapCgzCsMkxJgfYxZDbFjReheVPbhHWXMgEkigVXJpNUtluXdTzkpTjxGiqpyOoxUOWrtXzInkenF"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="rwrCkteR" content="WmmbaMByxCfPVyPTMNPVIlSPOeugmFSMFCOhccwvFqpSaKHTQiTErPuRHIanQChi"/>
+    <architecture name="FacclPsxTnGpNoFPEQZ" content="dItLJyTYXvcZYFJMJNokXjxnGSwVkeHAgDPJIUWcAQk"/>
+    <concerns name="HKyOMHD" content="ISQrzpClRyXBtbhiAmzdzyQYakCvOlDYDyQRhcGdHCavugjNvkTI"/>
+    <concerns name="iNAjzMuAOPojWlq" content="FWoGzIbNbOuzpMTZNSQzgYIkUHvsUWpQXdNuNsm"/>
+    <viewpoints name="ruOXcLbtE" content="slhDJNeKfrTwQpvflFjLvegtOmCHhQoCGoDSAbduWJDaxpmXIcaAjjGKQReGtDPUDyfHMGyZmv"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="RGTzegODUnh" content="ZovRRHmNgMovRGGWcfzYUTgwMbDtTFmDkwzieGeuVdC"/>
+    <missions name="create" content="create a data with all necessary parameters"/>
+    <architecture name="UBpDwTyzNxvFAJ" content="uLeMQqQIZKhAHGAfJYAwsMNP"/>
+    <stakeholders name="Deployment Architect" content="defines the group of persons who deploy the system in a given environment with the appropriate architecture" has="/99/@concerns.0"/>
+    <stakeholders name="dqGzOEEy" content="JhafaaSEdTiXXgNihlgcoeRBLhZWdpyoREwdyTcpMhxWKjpDjRqMJIyoORIzaBiimb"/>
+    <concerns name="wgIomD" content="MkexoxQbGEXrxlEbiXSiEsxPAVnpvhXiSeaLoXqoOLcpye"/>
+    <concerns name="RyCuztLshsPmga" content="JjRxUdNjQCdzxAuvcKSzEAaacDiHfJoPOIunQjPptVEnuxmlMwtItRHmKKaiRCNnDaYclCIRRlcwIXQPRrZZBcjUKGTmKksi"/>
+    <viewpoints name="VrPXel" content="WjTnhuawpVGzMOqCymTIBLbhKg"/>
+    <viewpoints name="CnwjzcOFvAkDrypxk" content="eCVkQRpGKVxuApiiUwKNnILrFrOUKomEAGNxYFfMPjgeYjIpuMAXQYambZoY"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <missions name="BYeibLtwRpLWfWei" content="sRaPYrWYkuWsgMSZPpqwCBowLuEPuTVhZqXLyCCecBpXXlElcYBryeISwItcuRZqgrHBFZUW"/>
+    <missions name="texcW" content="uOzTKYggLZnpHJpvNRTheDRHdYaCYxzBkTWbcDVhgqdTOUJmNfCqIo"/>
+    <missions name="MVPQxXAV" content="FuxfqwlFfndzDCEBuBhiPIUUiAejArHlMMEBYjpSePZzatTURIquvJh"/>
+    <architecture name="fjMmy" content="nIaNsrjhrzhkkDJYTyymwxvBOKKPgqkBTxFEjStMeMqVrbejUKVvzoVGyuffiqGH"/>
+    <stakeholders name="GRdiV" content="mPdxIBNgCDnFiTTWjVctbExgJvdxAGoZSKAAaQiLQpDXFWYnDFssbhtDXJlPTYYzwztQshzysvEGiEgHHrrlc"/>
+    <viewpoints name="BghmpqEnjscAyfsYXP" content="SnxmeemcOyacHeFAVhdNhvqsqYoOsmQigryowctRMdWjVfeaMRpfICIjbJmiADJtkKSdFCgIqc"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="hdGZPJJvhHDKqWycNN" content="ffZMomtyAJCTFGhgofOXMkzaspwNHeWzyfbgTAzVOgRZxaMOvMKwMYKhVnfSKD"/>
+    <stakeholders name="UMlVRxfpajPC" content="vfCSGZNzBqzOyvavyKmgSoosmFBSiapecSLmSELmqiGWolSlaxCRiBRwXfQ"/>
+    <concerns name="Hardware architecture" content="interest about the physical distribution" isImportantTo="/97/@stakeholders.0"/>
+    <concerns name="DNNZNoU" content="hRdLfFevHwfdTFLjiLSMSzlY"/>
+    <viewpoints name="HardwareDistribution" content="distribution of hardware components" usedToCover="/99/@concerns.0"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:IEEE1471Model>
+    <system name="RDB" content="Relational DataBase" fulfills="/93/@missions.0 /100/@missions.0 /97/@missions.0" inhabits="/0/@environment" hasAn="/100/@architecture" has="/100/@stakeholders.0 /97/@stakeholders.0"/>
+    <missions name="select" content="select several data in function of parameters"/>
+    <missions name="uspDWT" content="hpwpdyJrUpSkWOmLFisHEDUVcLNzJvOUltrCAdoISkQFEqdMqKClDkyiAxOrTRGIvrHekAuemSeOIJOyKcnJzheJJWvayKdnoWS"/>
+    <missions name="GhQxGJtRe" content="hWiBGweTfdwLwHOXqRupfrfIClTOZWcHnmWWRgTzyMERwxCEIpeaNbSQTyqyyGfBgJqBBMoTTlBuQXpbtI"/>
+    <architecture name="ClientServer" content="one server for several clients" describedBy="/0/@architecturalDescription"/>
+    <stakeholders name="DB architect" content="defines the class of persons who designe the DB" has="/100/@concerns.0"/>
+    <stakeholders name="WUPhMuLbYKNceDnpfXr" content="ARNGVqpgfxQxFAcvWTHFSeNcOJQxgqlQmPuDGPeinycEvYHDegmBrvpDuQQigvWPCSOiGTKVsRzsbYVPQUVRgRJRdjZCnmWXbfj"/>
+    <concerns name="RDB structure" content="interest about the enities and the relations in the database" isImportantTo="/100/@stakeholders.0"/>
+    <viewpoints name="RDB structure for one table" content="how to design a database model" hasSource="/0/@libraryViewpoints.0" usedToCover="/100/@concerns.0"/>
+    <viewpoints name="MsURRUWIJbTPvWRabhB" content="sLZjmsDpZApjBIBFMEaZefRdtqLSuIVWW"/>
+  </ieee1471:IEEE1471Model>
+  <ieee1471:System name="RVvYB" content="mZuwUhATeERIvkistmlvXGWSbfKhjiLJcgcMxEQEEOnjSwJALoFdOZULOyuuXrIXySSpFYsLtEkUGaHbjjMSMZyajSTXZDZ"/>
+  <ieee1471:System name="gYMDYbThndGrBCdY" content="AEyURddFpvUaPgCUKefpSVXutpYlIEbbXuvqGbLayrxplWQK"/>
+  <ieee1471:System name="ECpJDtawfojF" content="ExxNPqnHfsEfMzehlIrAQhWnmGUYlQpMHwYxdhzKTPEjjVHfhpZbWIiw"/>
+  <ieee1471:System name="SVgDofWmEmCQjyttcQ" content="EXoMupzlOtoIpkbTklfdbjLFaaobUKa"/>
+  <ieee1471:System name="wMmDY" content="ztHSjAqsVLjnjYzzzPlExmPUqjTMFjXWqrIoVKlfkIcWoYsAday"/>
+  <ieee1471:System name="jYhcwxkFxS" content="fezRQlJsBPExmVTMuYYKtAD"/>
+  <ieee1471:System name="wiDWyeaKOEEywPDQML" content="iRrBapmulVDgfnPkdjfvjRcXWSJONaehPIWhgfDZerjkaicwvWFfHVIKmzzS"/>
+  <ieee1471:System name="RAvFgGsHPBrepmmo" content="JoJyIKEhOhIZBivwJzwjiIfISfxOHndZFytpIvAYFlZMBcytgotMhpaUTnilBwfJTQXgXBomjjcuAYpyslRmZRMCyy"/>
+  <ieee1471:System name="mVQfax" content="ZBtWbDPKRiPKznAccFzqyDEhwbyAFziQubEAsnRgilPoDeEIsierareifkOSGpSxebhBmzEFLxdLwowHlRVXjHJOLkn"/>
+  <ieee1471:System name="AOAgBtXugYgcwStS" content="oECzGlixjPftEuRVbzTBwAMcfmBuIiHTgqhEnbv"/>
+  <ieee1471:System name="YHOLUlmmjEebwFfZO" content="waBTrdPIwUbCtfJFYblXrRCTDRhUozlIzqIeWoYViKREcYfmSzAJPBMMjuuFQ"/>
+  <ieee1471:System name="WIFMZbCqCVuVhXZ" content="eCaUIvnpnDnRbooNeYeXIXvgAWKLDBvnLJwukScuoeNyqdoBSctfDCUsJixjjRqteXFPNY"/>
+  <ieee1471:System name="WRKgMVKth" content="QfCdnpqAgMIXSOYoYaCCWvQFPhgKtdCHOVrtwouSEwrMhmIzBUWIohsVTzgkRqFeDQNtaoPREhwNkszPtsrSr"/>
+  <ieee1471:System name="HPbVk" content="rKvlKYsFRUhvfhFkxhMoSzniLSvsBExpfHxUkDnhYGkpqFK"/>
+  <ieee1471:System name="xylFiwlDsieVRlpEe" content="dySFgFtncXQOIxoRtKqyWiDXwm"/>
+  <ieee1471:System name="DDpnyaGpgcRIfqtcK" content="uosPyQSdaUEnsZpWruCtRYtZu"/>
+  <ieee1471:System name="qOVUiEB" content="oxjbkoqnyuLmYFFnWtmEshIgiSuTModxAFvgZrhmKVKAFe"/>
+  <ieee1471:System name="WJvAIopniGfPQqZSbPq" content="mbPhukAZsGMsjrRsJluTbadnUzsbyPIqBapzjQXVkDZqcZSn"/>
+  <ieee1471:System name="tsOrukVjK" content="LqaClQbrrhhamQeNlUVibYsiUPLuWmOmh"/>
+  <ieee1471:System name="QfDDX" content="wzEInJlJgttqpPYGVjyxJcNREOhgHFwfVZSOThwiuZywvxDlxQUgjIwzsTpsDvFojXhVLOjYE"/>
+  <ieee1471:System name="AXvkhMbsmVdgzJpAMIg" content="vOAJtGrbIGEeaLOTKTthFgrUTSoYUSmYZNTgbFgyFofyaoPOLvzve"/>
+  <ieee1471:System name="hreNWYjTNdkkSzIKHp" content="hzQrDPJNKnnxRWgBFsytbUuURQlilFJwaRjopXEgeKhBsLALVRRikJjOwqIFhMKFAITyfjXMSNDRGplKpuuVWCxpH"/>
+  <ieee1471:System name="FnMYyBXpdVDxi" content="PGvENxqyFkgQriqtkrNkSWyJTReFFEnbOQamkCB"/>
+  <ieee1471:System name="TSHFLttcDLhR" content="WDPzAqpJkpWnGnpiIuaDFNOoBcaKvsVNElzJFvTiItBamRToBHozsmUCZnBChGqABUUGrcfhDiO"/>
+  <ieee1471:System name="nOKNB" content="zelGNrNnnLNbtayLqfwroPUpehigkXLQAnMdEhjyEdZBklnWNiIqLtWEU"/>
+  <ieee1471:System name="aHyZeBzqwCbqw" content="cudvtmXXwiAvLllMzCoSyCOgKvlQObHmoUauYvlBFnJJwQvcTKaRTENaKVKuwTJZidEgVyCBtovQkJPTPKgLRxmNrLRuCocLoxp"/>
+  <ieee1471:System name="UtfGFP" content="qNygvmwxercBBdDCLWjtxvbe"/>
+  <ieee1471:System name="eUSSgcfD" content="XDanuTxDENfnENsBhdZsIjmdjaelTtdlYgoeLfEUUHltHHWmXDaM"/>
+  <ieee1471:System name="dzmxLQVmVtEhbKC" content="YQnaPKwNKxxnTEurqKkHCzfugZaHiGIBeeuzMmfaJFfAnLYTV"/>
+  <ieee1471:System name="FKlDJJgMlF" content="idBAfVNNbYvqiqyYhHUxUUuEzHNtJlZVJbuFQbVbCGEJuOQqUTAICtNPLZnTAPtYbVmzJbWEJQAyEuEKCGHLbJpEvYw"/>
+  <ieee1471:System name="svOsuVAluGGR" content="drHhwOPOAJrBWUCaoLXnmeAubGbbyqjgxbfSNGohzsJVSvZtRamQDzBThEznaMjiGersohMnutvTaolw"/>
+  <ieee1471:Architecture name="vcPFnGaPpbjAeRb" content="iEDpwEFTcPRMEuWzHbJEaTDIGhGFk"/>
+  <ieee1471:Architecture name="vCThtxXK" content="APKsuafJmseQHXsprzjSTxXhxtLWJtcuYAfpalDziGSwJBsFaaAXhgzAdoXBMNwLdCbVrdCnlXdECwGFe"/>
+  <ieee1471:Architecture name="MTZtfqAriLLYpHKJ" content="ZbZlyghHkBmQJNXojVNaxfxxVbPllEIcDvBrGpQWmwrVGjOPCuFmvAvsOHPeACxnNluuvWuCrANTspbAJWdGrpSyZdWymoLVx"/>
+  <ieee1471:Architecture name="iHKFVxQhgNzR" content="vvPQjBjTRZJcFQaWXMQyhGpbcMnuDLwWkWIpAOEpaTmdlBokZmYkwjpWwOIYKtGwlbh"/>
+  <ieee1471:Architecture name="pnXCagHifPUXWoU" content="uidmlQZgkiVylpfGqLQgqfNJoKYbQEMunOhmCowzJjkNyxfEBELLRhAXvEfDFvmbHKAurBfGm"/>
+  <ieee1471:Architecture name="qZshfwqvPXvrC" content="asbttoWeDbDODAkgVscbNJVVkHnqKNARMBDJayeINPuaWmowcfgkWZuSXCMeZHTQDtNGOcOiWpCPnkPdGResk"/>
+  <ieee1471:Architecture name="fKDkdHWSBBvICCbtsU" content="JidkJAvbiOYTkSKOBnQUcitgEXKjyJZuGXkbKQxpSHfgrFpjmPPaXokKLGRvMRXMiyfzNRKa"/>
+  <ieee1471:Architecture name="rnWar" content="MrstVjMLIfoimviOsjEYHvMXFAksZluvTuBWfpfMTWGKdeREzjbvGBQjYqbwnvtZRZEPCmTKvLtPMvrYZGTW"/>
+  <ieee1471:Architecture name="iUOrVrUrBnfeIK" content="rhBJobCyFAoUPBAYQAGSIkvIfZezZhaXErdKansLym"/>
+  <ieee1471:Architecture name="fviuVVbLOzqfFRha" content="IoYIvooPMQTfHYBLmMheybPMlwBEDbYPuVGyphIRXsK"/>
+  <ieee1471:Architecture name="XsOKGTrrYaNWQDeBWpv" content="XcyDmPpOJrBWKpHsXtBMvhggQNGHXkDmRIHuNstZmacEv"/>
+  <ieee1471:Architecture name="AWmarKf" content="HPgmEoCJXafFSdVLxXbmqZWdjVkMGsyZiEpcuRjsFmcziKBzptpxikDTNEjc"/>
+  <ieee1471:Architecture name="YDnIQizeFHOSseeWvFb" content="ONriKKWWDaGVapjPNZCLJkYMmsBRJCDfEQhcIpGl"/>
+  <ieee1471:Architecture name="HsagupohCjLT" content="NpLdqauxfzHwhxgXWmuiNBLurGVMduFGWxsDYHeogRUbqHRSduHITTrEmyFeEXYPBq"/>
+  <ieee1471:Architecture name="cWfbODWSWXbZl" content="rVpPnvNWjxlqWcfjrmZgRccIFSbteeeayfUxKkfKvATOzTsTkBpLsOrsyIkwKeRtUZTLONjhgRoeerJLsOckbBgmdMJNRVrBqU"/>
+  <ieee1471:Architecture name="iOOEjrtthsrAc" content="DWNQYYPbXFaKkYZaxWTrxvJqrpZcJidLIj"/>
+  <ieee1471:Architecture name="GRnubyvjTcTt" content="cggcbmDvEBurcoMvMzZPZiyQeNgRHxj"/>
+  <ieee1471:Architecture name="fnyEOUwFqi" content="frJPWUKHPUkhYEWpfABAFFzouWJdMhoEJc"/>
+  <ieee1471:Architecture name="drMrbptbkbxsuwtd" content="FkpXvwXxsVUjujiwlOqHvrBVRdZtxTotjLHYivrxKSbZyKAgnFCIwkSnNayTrpGWiisbOrlWRQweWvYdbqEVuTqONsBqbreei"/>
+  <ieee1471:Architecture name="teLKVAC" content="neTHgoepNOOEqfbKYWTtkjgknpYiEcKjLnKFfCBaWy"/>
+  <ieee1471:Architecture name="atpvGbHcGWIskC" content="aBWHkThEslxDEPQroNcb"/>
+  <ieee1471:Architecture name="zZiYknHaPUYwwxYi" content="MsjPFBtGhsVEIGKkyvwWEzGJdQvVjrYiMmtXogfRRJUwTEuKuRvGPkKdCEiQQsygUAyPxTqrQxkQ"/>
+  <ieee1471:Architecture name="VgxHuMnLtxda" content="NSoyuUSBQwJrZruZiNZxEnbUOyrSaUlwiflJdGnGJNzGBVaiaMbuptCtQgfzKPISVMPSLLgeZfskAUxPh"/>
+  <ieee1471:Architecture name="PbVMzNKmtMKdzdjL" content="AFjKEBpAxCPzczOTEjWfCIdwMXKhLtxLeSMWVhgVXzILFmPaGdihTgUhAAoemRcISpnuODLozlLGGc"/>
+  <ieee1471:Architecture name="tZMWfJbQTX" content="USteJWhavYWQnuEGvmMDLyaBrELTgoYNEEDBqAxccwOgytoqMzrlHIyffndiDFNQ"/>
+  <ieee1471:Architecture name="UUeSmlSKLYmjS" content="pehLCJDNQPUeuhVfRThOyIufuCmagbCdUHzMyzFucNuINZVwhaNXZBfhBzvwupavIMmhqvthDF"/>
+  <ieee1471:Architecture name="PeRdXb" content="JNOiYXJaOPymYZbiPKpZAN"/>
+  <ieee1471:Architecture name="hSAFYqqSdIUqy" content="cNAVoaxXasyfzCiYgJrLMFrGoKqmXRLjqfUWydxaQTnVcguhpySAbFpJvIyzBrLvHHnIXiJwoOgJUMPGNpcE"/>
+  <ieee1471:Architecture name="XYDbToGCDEUVja" content="ovdCJannxlJcbJFAaoxWLrYbdjwrrOlMySAiCoVnrDpmDrQxPbZaxvLNvdfsjiCoHOuQo"/>
+  <ieee1471:Architecture name="YQdHBbotEV" content="BCtcTTCHENeQaXkzmOjheTIvlfnjlkXSsrYQZRvMxoUyDuyVEJmfTCoxARHHAqMCkTZUIVbsweQgLDSofLmjqkGheUsGoxLC"/>
+  <ieee1471:Architecture name="tXqlwa" content="wkgHuFgbxYQTgMINPCYThgDPEBjIBYLAhGGsgZkJyW"/>
+  <ieee1471:Architecture name="yLTICCByr" content="rtFnWRGzOiXeKiZOQIPMGjYllyPpRfZEIrYuDgHrLYLieKGvnHRkOxtZwcmRpwsJSiLkUzoXiqJyaokMSkKVlUcCvnhIgFChBNN"/>
+  <ieee1471:Architecture name="HVDtI" content="NrgjAWsqrsPwvLezrBaxtGrmaipRScWKZsUgfrMJLLMfUorPrNqCEKnQRRLmshrGBZdlxbaeqVV"/>
+  <ieee1471:Architecture name="QYBlTpeDYPeMLv" content="DeoRPFSOUqFghmYbXRmVUDlveQ"/>
+  <ieee1471:Architecture name="PwpLIzZUTmw" content="DeebTloGtJpgcnQeWWFDGuLiwnHetadJzfgVeASpAzmEUhWFsVtVDRntufWXlbEzskKPEJobedsELLDHZCCbYRSFhtt"/>
+  <ieee1471:Architecture name="xeidJOLSsQyTjJPjsAv" content="uWRGgtbYawUawmJtWdEymAsAjekdyWUsBoUABHwxhdJESPPVqqcBcDPHAreAglSLfpAxnRcIcHiPhYarPhl"/>
+</xmi:XMI>
