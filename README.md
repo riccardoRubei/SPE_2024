@@ -54,8 +54,8 @@ Ingredients to manually run the evaluation:
 
 Then use the following command (remember to change the paths):
 
-`java -javaagent:joularjx-2.0.jar -jar ATLTransformer.jar path/to/ATLtransformation path/to/inputMetamodel path/to/inputModel path/to/targetMetamodel path/to/result.xmi Name of the Input Metamodel IN Name of the Target Metamodel OUT`
+`sudo java -javaagent:joularjx-2.0.jar -jar ATLTransformer.jar path/to/ATLtransformation path/to/inputMetamodel path/to/inputModel path/to/targetMetamodel path/to/result.xmi Name of the Input Metamodel IN Name of the Target Metamodel OUT`
 
 The following is a concrete example:
 
-`java -javaagent:joularjx-2.0.jar -jar ATLTransformer.jar ../Data/RQ2_RQ3/MySQL5-5/MySQL2KM3SimplifiedRQ3BisFalse.atl ../Data/RQ2_RQ3/MySQL5-5/MySQL.ecore ../Data/RQ2_RQ3/MySQL5-5/Output0.model ../Data/RQ2_RQ3/MySQL5-5/KM3.ecore ../Data/RQ2_RQ3/MySQL5-5/result.xmi MySQL IN KM3 OUT`
+`sudo java -javaagent:joularjx-2.0.jar -jar ATLTransformer.jar ../Data/RQ2_RQ3/MySQL5-5/MySQL2KM3SimplifiedRQ3BisFalse.atl ../Data/RQ2_RQ3/MySQL5-5/MySQL.ecore ../Data/RQ2_RQ3/MySQL5-5/Output0.model ../Data/RQ2_RQ3/MySQL5-5/KM3.ecore ../Data/RQ2_RQ3/MySQL5-5/result.xmi MySQL IN KM3 OUT`
