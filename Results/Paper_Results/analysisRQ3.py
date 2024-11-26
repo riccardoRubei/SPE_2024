@@ -2,7 +2,7 @@ import csv
 
 
 def analysis():
-    resultFile = 'ResultsRQ3.txt'
+    resultFile = 'ResultsRQ3Serialization.txt'
     averageConsumption = 0.0
     executionTime = 0.0
 
